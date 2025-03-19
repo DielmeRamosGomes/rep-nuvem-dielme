@@ -1,6 +1,15 @@
-p{
+body {
+    font-family: Arial, sans-serif;
+}
+
+p {
     color: blue;
     font-size: 16px;
+}
+
+.paragrafo_verde {
+    color: green;
+    font-size: 20px;
 }
 
 
