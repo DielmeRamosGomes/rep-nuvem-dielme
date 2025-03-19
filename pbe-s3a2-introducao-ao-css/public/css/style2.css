@@ -1,0 +1,32 @@
+p {
+    color: blue;
+    font-size: 80px;
+}
+
+.paragrafo_verde {
+    color: green;
+    font-size: 80px;
+}
+
+#paragrafo_amarelo {
+    color: yellow;
+    font-size: 80px;
+}
+
+div p {
+    color: blueviolet;
+    font-size: 80px;
+}
+
+ul > li {
+    color: brown;
+    font-size: 40px;
+}
+
+h1+p {
+    font-style: italic;
+    font-size: 40px;
+}
+
+
+
