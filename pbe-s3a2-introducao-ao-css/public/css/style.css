@@ -7,16 +7,40 @@ p {
     font-size: 16px;
 }
 
+div p {
+    color: darkblue;
+}
+
+div ul {
+    color: red;
+}
+
+ul > li {
+    color: grey;
+}
+
 .paragrafo_verde {
     color: green;
     font-size: 20px;
 }
 
+input[type="text"] {
+    border: 20px solid green;
+}
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    padding: 20px;
+}
 
-
-
-
+.item {
+    background-color: #ccc;
+    padding: 40px;
+    margin: 10px;
+}
 
 
 
