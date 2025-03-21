@@ -5,10 +5,10 @@ resultado = 0
 
 if opcao == "+":
      resultado =  numero1 + numero2
-     print(resultado)
+     print(f"Resultado é {resultado}")
 elif opcao == "*":
      resultado = numero1 * numero2
-     print(resultado)
+     print(f"Resultado é {resultado}")
 else:
     print("Não foi possivel fazer a operação")
 
