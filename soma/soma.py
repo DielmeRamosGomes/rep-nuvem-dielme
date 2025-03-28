@@ -7,3 +7,4 @@ else:
     resultado = numero2 - numero1
 print(f"Resultado é = {resultado}")
 
+
