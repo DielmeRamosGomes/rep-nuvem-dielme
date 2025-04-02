@@ -2,19 +2,5 @@
     "cSpell.words": [
         "mesma"
     ],
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default",
-                "enableSsl": "Disabled"
-            },
-            "previewLimit": 50,
-            "server": "localhost",
-            "port": 3306,
-            "driver": "MySQL",
-            "name": "dielme-server",
-            "username": "root",
-            "database": "test_db"
-        }
-    ]
+    "sqltools.connections": []
 }
