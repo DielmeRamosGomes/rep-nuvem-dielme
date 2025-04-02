@@ -1,5 +1,5 @@
 import { createInterface } from 'readline';
-const rl1 = createInterface({
+const rl = createInterface({
     input: process.stdin,
     output: process.stdout
 });
@@ -9,11 +9,12 @@ let resultado;
 let numeros = [];
 
 function lerNumeros() {
-    rl1.question(`Digite um número: `, (entrada) => {
+    rl.question(`Digite um número: `, (entrada) => {
         numero = parseFloat(entrada);
         if(isNaN(numero)) {
             console.log("Entrada inválida. Por favor, insira um número."); 
-            //rl1.close();
+            rl1.close();
+            return;
         }
         else {
             numeros.push(numero);
