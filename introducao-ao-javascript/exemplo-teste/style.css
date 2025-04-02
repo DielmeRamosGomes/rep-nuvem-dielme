@@ -1,0 +1,17 @@
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
+
+main {
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+}
