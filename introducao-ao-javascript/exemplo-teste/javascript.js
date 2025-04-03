@@ -30,7 +30,6 @@ function lerNumeros() {
                     resultado = numeros[1] - numeros[0];
                     console.log(`O resultado da subtração é = ${resultado}`);
                 }
-
             }
         }
     });
