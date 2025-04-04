@@ -1,7 +1,5 @@
-numero = 1
-while (numero <= 20):
-    print(f"numero = {numero}")
-    numero = numero + 1
+for i in range(5):     # iteração do valor i de [0,4]
+    print(f"i = {i}")
 
 
 
