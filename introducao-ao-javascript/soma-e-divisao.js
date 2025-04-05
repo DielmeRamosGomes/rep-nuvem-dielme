@@ -15,8 +15,8 @@ readLine.question(`Digite o número de vezes que deseja fazer a soma e divisão:
     let a = 1;
     let b = n_vezes;
     let resultado = 0;
-    contador_a = 1;
-    contador_b = n_vezes;
+    let contador_a = 1;
+    let contador_b = n_vezes;
 
     while (contador_a <= n_vezes) {
         resultado = resultado + (a/b);
