@@ -3,7 +3,7 @@ import http from 'http';
 // Criando um servidor HTTP
 const server  = http.createServer((req, res) => {
     res.statusCode = 200;
-    res.setHeader({'Content-Type': 'text/plain'});
+    res.setHeader('Content-Type', 'text/plain');
     res.end('Bem-vindo ao meu servidor Node.js!');
 });
 
