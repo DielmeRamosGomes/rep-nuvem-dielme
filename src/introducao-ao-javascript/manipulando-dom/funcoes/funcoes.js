@@ -1,5 +1,5 @@
-let numero1 = 10;
-let numero2 = 20;
+let numero1 = 80;
+let numero2 = 93;
 /*
 function somar(num1, num2) {
     return num1 + num2;
