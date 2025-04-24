@@ -4,7 +4,7 @@ import './Card_image.css';
 function Card_image() {
     return(
         <div className="card-image">
-            <img id='gato1' src={gato1} alt=""/> 
+            <img onClick={() => {}} id='gato1' src={gato1} alt=""/> 
         </div>
     );
 }

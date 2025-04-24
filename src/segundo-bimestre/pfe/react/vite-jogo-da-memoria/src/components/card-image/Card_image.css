@@ -12,6 +12,16 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    animation: girar 5s linear;
+    transition: transform 0.5s ease-in-out;
 }
 
+@keyframes girar {
+    from {
+        transform: rotateY(0deg);
+    }
+    
+    to {
+        transform: rotateY(360deg);
+    }
+}
