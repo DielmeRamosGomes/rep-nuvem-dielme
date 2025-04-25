@@ -7,11 +7,11 @@ create table if not exists clientes(
 );
 
 insert into clientes(cliente_id, cliente_nome, cliente_idade)
-    values(default, "Carlos", 23);
+    values(default, "Marcelo", 14);
 
 select * from clientes;
 select cliente_nome, cliente_idade from clientes;
-
+select * from clientes where cliente_idade >= 18;
 
 
 
