@@ -1,5 +1,5 @@
 {
-  "name": "vite-ola-mundo",
+  "name": "vite-s8a3-todo-list",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "vite-ola-mundo": "file:"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
