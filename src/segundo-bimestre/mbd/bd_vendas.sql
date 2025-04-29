@@ -7,7 +7,7 @@ create table if not exists vendas(
 );
 
 insert into vendas(id_venda, produto, quantidade, valor_unitario, data_venda)
-    values(default, "bola", 1, 150, "2025-04-01");
+    values(default, "geladeira", 2, 1000, "2025-03-30");
 
 update vendas set produto = "cadeira" where id_venda = 3;
 
@@ -16,6 +16,10 @@ update vendas set produto = "cadeira" where id_venda = 3;
 SELECT COUNT(*) AS total_vendas FROM vendas WHERE data_venda 
     BETWEEN DATE_SUB(CURDATE(), INTERVAL 1 MONTH) AND 
         LAST_DAY(DATE_SUB(CURDATE(), INTERVAL 1 MONTH));
+
+/* vendas nos ultimos 30 dias */
+SELECT COUNT(*) AS total_vendas FROM vendas WHERE data_venda 
+    BETWEEN DATE_SUB(CURDATE(), INTERVAL 1 MONTH) AND CURDATE();
 
 /* 2) Qual foi o valor total de vendas de cada produto? */
 
@@ -56,3 +60,4 @@ select produto, avg(total_vendas) as media_vendas from (
 
 
 select * from vendas;
+use bd_vendas;
