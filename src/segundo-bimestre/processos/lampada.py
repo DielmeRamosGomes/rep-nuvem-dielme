@@ -5,10 +5,10 @@ class Lampada():
     def alterar_estado(self):
         if self.estado == False:
             self.estado = True
-            print(f"Lampada ligada")
+            return "Lampada ligada"
         else:
             self.estado = False
-            print(f"Lampada Desligada")
+            return "Lampada Desligada"
 
 lampada = Lampada()
 print(lampada.alterar_estado()) # lampada ligada

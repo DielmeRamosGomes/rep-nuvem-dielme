@@ -58,6 +58,6 @@ select produto, avg(total_vendas) as media_vendas from (
         group by produto, data_venda
 ) as vendas_por_dia group by produto;
 
-
 select * from vendas;
-use bd_vendas;
+
+
