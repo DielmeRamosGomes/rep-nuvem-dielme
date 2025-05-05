@@ -1,0 +1,31 @@
+@mixin box-shadow($color, $intensity) {
+    box-shadow: 0 4px $intensity rgba($color, 0.3);
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    @include box-shadow(black, 5px); /* Aplica o mixin de sombra */
+  
+    .card-title {
+      color: var(--primary-color);
+      font-size: var(--font-size-large);
+    }
+  
+    .card-description {
+      font-size: var(--font-size-base);
+      color: #333;
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
