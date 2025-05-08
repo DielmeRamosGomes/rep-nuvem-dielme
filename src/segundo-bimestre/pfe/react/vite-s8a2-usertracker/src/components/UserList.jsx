@@ -11,7 +11,7 @@ class UserList extends Component {
 
     // Simula a obtenção de dados de usuários ao montar o componente
     componentDidMount() {
-        this.setState({users: ['Alice', 'Bob', 'Charlie']});
+        this.setState({users: ['Alice', 'Bob', 'Charlie', 'Roberto', 'Ana']});
     }
 
     // Atualiza a lista de usuários ao receber novos dados (simulado)
