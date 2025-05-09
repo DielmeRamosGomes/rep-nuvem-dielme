@@ -74,4 +74,4 @@ select DATE_FORMAT(v.data_venda, '%Y-%m') as mes, p.categoria, SUM(v.quantidade 
         where v.data_venda >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) group by mes, p.categoria
             order by mes desc, p.categoria;
 
-            
+select * from produtos;            
