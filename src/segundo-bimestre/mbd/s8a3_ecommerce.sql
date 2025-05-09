@@ -11,7 +11,8 @@ create table if not exists vendas(
     id_venda int auto_increment primary key,
     id_produto int not null,
     quantidade int not null,
-    data_venda date not null
+    data_venda date not null,
+    foreign key (id_produto) references produtos(id_produto)
 );
 
 insert into produtos (nome, categoria, preco) values
