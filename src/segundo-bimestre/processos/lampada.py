@@ -2,17 +2,20 @@ class Lampada():
     def __init__(self):
         self.estado = False
 
-    def alterar_estado(self):
+    def alterar_estado_ligado(self):
         if self.estado == False:
             self.estado = True
-            print("Lampada ligada")
-        else:
-            self.estado = False
-            print("Lampada Desligada")
+            return self.estado
 
+    def alterar_estado_desligado(self):
+        if self.estado == True:
+            self.estado = False
+            return self.estado
+        
 lampada = Lampada()
-print(lampada.alterar_estado()) # lampada ligada
-print(lampada.alterar_estado()) # lampada Desligada
+print(f"A lâmpada está ligada? {lampada.alterar_estado_ligado()}") 
+print(f"A lâmpada está ligada? {lampada.alterar_estado_desligado()}") 
+
 
 
 
