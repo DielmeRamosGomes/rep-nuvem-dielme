@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   font-family: Arial, sans-serif;
+  font-size: 20px;
 }
 
 .todo-item {
@@ -10,6 +11,5 @@
 }
 
 .completed {
-  text-decoration: line-through;
   color: red;
 }
