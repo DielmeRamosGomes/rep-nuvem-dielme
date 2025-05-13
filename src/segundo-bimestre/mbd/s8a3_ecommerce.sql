@@ -11,7 +11,8 @@ create table if not exists vendas(
     id_venda int auto_increment primary key,
     id_produto int not null,
     quantidade int not null,
-    data_venda date not null
+    data_venda date not null,
+    foreign key (id_produto) references produtos(id_produto)
 );
 
 insert into produtos (nome, categoria, preco) values
@@ -73,4 +74,4 @@ select DATE_FORMAT(v.data_venda, '%Y-%m') as mes, p.categoria, SUM(v.quantidade 
         where v.data_venda >= DATE_SUB(CURDATE(), INTERVAL 3 MONTH) group by mes, p.categoria
             order by mes desc, p.categoria;
 
-            
+select * from produtos;            

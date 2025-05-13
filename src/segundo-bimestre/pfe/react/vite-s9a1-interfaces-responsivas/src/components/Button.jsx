@@ -15,7 +15,7 @@ function Button() {
 
     return(
         <div className='button-container'>
-            <button className='button' onMouseEnter={mouseEnterElement} onMouseLeave=           {mouseLeaveElement}>{isHovering ? 'Comprar agora!' : 'Você está prestes a comprar o produto!'}
+            <button className='button' onMouseEnter={mouseEnterElement} onMouseLeave={mouseLeaveElement}>{isHovering ? 'Comprar agora!' : 'Você está prestes a comprar o produto!'}
             </button>
         </div>
     );
