@@ -1,5 +1,5 @@
 @mixin box-shadow($color, $intensity) {
-    box-shadow: 0 4px $intensity rgba($color, 0.3);
+    box-shadow: 5px 5px $intensity rgba($color, 0.3);
   }
   
   .card {

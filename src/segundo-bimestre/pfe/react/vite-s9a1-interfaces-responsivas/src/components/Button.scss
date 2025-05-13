@@ -19,7 +19,7 @@
 
     &:hover {
         background-color: var(--secondary-color);
-        @include transition(all, 0.5s) /* aplica o mixin de transição */
+        @include transition(all, 0.3s) /* aplica o mixin de transição */
     }
 }
 

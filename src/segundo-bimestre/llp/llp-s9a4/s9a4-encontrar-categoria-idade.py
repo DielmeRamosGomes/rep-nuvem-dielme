@@ -15,4 +15,3 @@ if categoria == "Idade inválida!":
 else:
     print(f"A idade é {idade} e a categoria é: {categoria}")
 
-    
