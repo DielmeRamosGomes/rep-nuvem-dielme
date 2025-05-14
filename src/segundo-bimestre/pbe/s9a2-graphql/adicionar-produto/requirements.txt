@@ -1,0 +1,4 @@
+Flask
+graphene
+flask-graphql
+
