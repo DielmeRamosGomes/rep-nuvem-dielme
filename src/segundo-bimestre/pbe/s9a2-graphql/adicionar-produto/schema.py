@@ -19,7 +19,7 @@ class AdicionarProduto(graphene.Mutation):
     produto = graphene.Field(Produto)
 
     # mutate: A função que realmente adiciona o produto à nossa lista produtos (simulando um banco de dados) e retorna o novo produto.
-    def mutate(root, info, nome, preco):
+    def mutate(root, _, nome, preco):
         novo_produto = Produto(id=len(produtos) + 1, nome=nome, preco=preco)
         produtos.append(novo_produto)
         return AdicionarProduto(produto=novo_produto)
