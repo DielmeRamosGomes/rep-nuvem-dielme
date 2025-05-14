@@ -1,0 +1,82 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Mobile First Design */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-links li {
+    font-size: 1rem;
+}
+
+.intro {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+}
+
+.project {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+/* Media Queries para tablets */
+@media (min-width: 600px) {
+    .navbar {
+        justify-content: space-around;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Media Queries para desktops */
+@media (min-width: 1024px) {
+    .navbar {
+        justify-content: flex-start;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
