@@ -8,6 +8,11 @@ app = Flask(__name__)
 # Chave secreta para assinar os tokens JWT
 app.config['SECRET_KEY'] = 'minha_chave_secreta'
 
+produtos = [
+        {"id": 1, "nome": "Camiseta", "preco": 50.00},
+        {"id": 2, "nome": "Tênis", "preco": 120.00}
+    ]
+
 # Função para verificar o token JWT
 def token_requerido(f):
     @wraps(f)
@@ -39,10 +44,6 @@ def login():
 @app.route('/produtos', methods=['GET'])
 @token_requerido
 def listar_produtos():
-    produtos = [
-        {"id": 1, "nome": "Camiseta", "preco": 50.00},
-        {"id": 2, "nome": "Tênis", "preco": 120.00}
-    ]
     return jsonify(produtos)
 
 # Rota para adicionar produto (restrito para administradores)
@@ -52,7 +53,7 @@ def adicionar_produto():
     if request.user_data['usuario'] != 'admin':
         return jsonify({'mensagem': 'Ação não permitida!'}), 403
     novo_produto = request.get_json()
-    # Lógica para adicionar o produto
+    produtos.append(novo_produto)
     return jsonify({'mensagem': 'Produto adicionado com sucesso!'}), 201
 
 # Rota para remover produto (restrito para administradores)
