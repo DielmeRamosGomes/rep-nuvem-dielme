@@ -25,7 +25,7 @@ INSERT INTO clientes_fisicos (id_cliente, nome, email, cidade) VALUES
 (3, 'Denis Pereira', 'denis@email.com', 'Salvador');
 
 /*1.	UNION: Retorne todos os clientes que compraram em qualquer uma das lojas (on-line ou física) sem duplicar informações. */
-SELECT nome, email, cidade FROM clientes_online
+explain SELECT nome, email, cidade FROM clientes_online
 UNION
 SELECT nome, email, cidade FROM clientes_fisicos;
 

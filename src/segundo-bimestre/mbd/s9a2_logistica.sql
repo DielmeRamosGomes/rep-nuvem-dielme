@@ -44,3 +44,4 @@ SELECT cidade, SUM(peso_entrega) AS total_peso
 SELECT v.modelo, sum(e.peso_entrega) AS total_peso_entregas
     FROM veiculos v JOIN entregas e ON v.id_veiculo = e.id_veiculo 
         GROUP BY v.modelo HAVING total_peso_entregas > 10.0;
+
