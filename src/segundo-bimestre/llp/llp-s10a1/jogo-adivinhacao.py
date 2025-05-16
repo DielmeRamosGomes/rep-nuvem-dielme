@@ -11,9 +11,9 @@ while(input("Deseja continuar executando?[sim, nao]: ").lower() != 'nao'):
             print("O número aleatório é menor!")
         numero = int(input("Digite um número entre 1 e 100: "))
         numero_tentativas = numero_tentativas + 1
-        if numero_tentativas >= 5:
+        if numero_tentativas > 5:
             break
-    if numero_tentativas >= 5:
+    if numero_tentativas > 5:
         print(f"Você perdeu! e o número aleatório é: {numero_aleatorio}")
     else:
         print(f"Você ganhou! em {numero_tentativas} tentativas e o número aleatório é: {numero_aleatorio}")
