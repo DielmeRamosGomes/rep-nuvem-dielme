@@ -1,15 +1,23 @@
 from pymongo import MongoClient
 from flask import Flask, jsonify, request
 from bson.objectid import ObjectId
+from pymongo.server_api import ServerApi
 
 # pip install pymongo
 
 app = Flask(__name__)
 
-uri = 'mongodb+srv://dielme:1234@cluster0.g8uqx.mongodb.net/'
+uri = 'mongodb+srv://dielme:1234@cluster0.g8uqx.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
 # Conexão com o banco de dados MongoDB
 # client = MongoClient('mongodb://localhost:27017/')
-client = MongoClient(uri)
+client = MongoClient(uri, server_api=ServerApi('1'))
+# Send a ping to confirm a successful connection
+try:
+    client.admin.command('ping')
+    print("Sucesso ao conectar com MongoDB!")
+except Exception as e:
+    print(e)
+
 db = client['ecommerce']
 produtos_collection = db['produtos']
 
@@ -60,8 +68,6 @@ def remover_produto(id):
 if __name__ == '__main__':
     app.run(debug=True)
 
-# use('ecommerce')
-# db.getCollection('produtos').find({"preco: { $gt: 100 }}, "nome": 1, "preco": 1})
 
 
 
