@@ -1,5 +1,5 @@
-temperatura = int(input("Qual é a temperatura atual? "))
-esta_chovendo = input("Está chovendo? (sim/não) ") == 'sim'
+temperatura = int(input("Qual eh a temperatura atual?: "))
+esta_chovendo = input("Está chovendo? (sim/não): ").lower()
 if temperatura > 30:
     print("Está quente.")
     if esta_chovendo == 'sim':
