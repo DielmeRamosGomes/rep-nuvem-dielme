@@ -1,7 +1,11 @@
 {
   "dependencies": {
+    "axios": "^1.9.0",
     "mongodb": "^6.16.0",
     "mongoose": "^8.15.0"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
