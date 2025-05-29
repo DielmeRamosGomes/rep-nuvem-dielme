@@ -1,4 +1,4 @@
-import { calcularTotalPedido, aplicarDesconto } from './Pedidos.js';
+const { calcularTotalPedido, aplicarDesconto } = require('./pedidos');
 
 describe('Função calcularTotalPedido', () => {
   test('Deve calcular o total corretamente para uma lista de produtos', () => {
