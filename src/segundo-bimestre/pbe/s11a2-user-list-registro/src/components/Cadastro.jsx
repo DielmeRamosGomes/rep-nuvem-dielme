@@ -1,6 +1,24 @@
 import React from 'react';
 
 function Cadastro() {
+
+  const cadastrarUsuario = (event) => {
+    event.preventDefault(); // Impede o envio do formulário
+
+    const form = document.getElementById('formCadastro');
+    const formData = new FormData(form);
+
+    const usuario = {
+      cargo: formData.get('cargo'),
+      nome: formData.get('nome'),
+      email: formData.get('email'),
+      senha: formData.get('senha')
+    };
+
+    console.log(usuario);
+    alert(`Usuário cadastrado com sucesso!\nCargo: ${usuario.cargo}\nNome: ${usuario.nome}\nEmail: ${usuario.email}`);
+  };
+
   return (
     <div>
       <h1>Cadastro de usuário</h1>
@@ -20,7 +38,7 @@ function Cadastro() {
                 <label htmlFor="senha">Senha: </label>
                 <input type="password" id="senha" name="senha" required />
                 <br/>
-                <button id='buttonCadastrar' type="submit">Cadastrar</button>
+                <button id='buttonCadastrar' type="submit" onClick={cadastrarUsuario}>Cadastrar</button>
             </div>
         </form>
     </div>
