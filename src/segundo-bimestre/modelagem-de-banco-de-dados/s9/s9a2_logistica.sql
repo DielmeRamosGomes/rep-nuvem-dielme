@@ -40,6 +40,9 @@ values
     (4, '2024-08-10', 'São Paulo', 13.50),
     (2, '2024-08-12', 'Brasília', 2.00);
 
+insert into entregas (id_veiculo, data_entrega, cidade, peso_entrega)
+values(1, '2024-08-15', 'São Paulo', 5.5);
+
 select
     *
 from
@@ -72,3 +75,11 @@ GROUP BY
     v.modelo
 HAVING
     total_peso_entregas > 10.0;
+
+--soma todas as entregas da cidade de São Paulo por veiculo
+SELECT v.modelo, SUM(peso_entrega) AS total_peso_sao_paulo
+    FROM veiculos v 
+        join entregas e on v.id_veiculo = e.id_veiculo
+            WHERE e.cidade = 'São Paulo'
+                GROUP BY v.modelo;
+
