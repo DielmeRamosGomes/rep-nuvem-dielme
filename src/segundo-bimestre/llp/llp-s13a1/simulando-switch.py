@@ -10,7 +10,7 @@ def simulando_switch_dia(dia):
     }
     return dias.get(dia, "Dia inválido!")
 
-dia_selecionado = simulando_switch_dia(3)
+dia_selecionado = simulando_switch_dia(8)
 print(f"O dia é: {dia_selecionado}")
 
 
