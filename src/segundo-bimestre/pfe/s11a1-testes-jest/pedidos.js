@@ -8,6 +8,7 @@ function aplicarDesconto(total, desconto) {
   }
   return total - desconto;
 }
+
 module.exports = { calcularTotalPedido, aplicarDesconto };
 
 
