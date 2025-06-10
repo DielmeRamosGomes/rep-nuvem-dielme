@@ -16,6 +16,6 @@ switch = {
 entrada = "texto"
 valor = "Olá Mundo"
 resultado = switch.get(entrada, padrao)(valor)
-print(resultado) # Saída: OLÁ MUNDO
+print(resultado)
 
 
