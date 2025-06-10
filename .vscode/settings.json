@@ -18,5 +18,19 @@
         "registro",
         "Solicita"
     ],
-    "sqltools.connections": []
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3307,
+            "driver": "MySQL",
+            "name": "dielme",
+            "database": "db_loja_ecommerce",
+            "username": "root"
+        }
+    ]
 }
