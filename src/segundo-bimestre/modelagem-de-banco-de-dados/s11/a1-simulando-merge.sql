@@ -18,15 +18,15 @@ insert into bd_simulando_merge.produtos (nome, quantidade) values
 ('Produto D', 40);
 
 insert into bd_simulando_merge.inventario (produto_id, nome, quantidade) values
-(3, 'Produto C', 30),
-(4, 'Produto D', 40);
+(1, 'Produto C', 30),
+(2, 'Produto D', 40);
 
 select * from bd_simulando_merge.produtos;
 select * from bd_simulando_merge.inventario;
 
 /* Simulando o MERGE com INSERT ... ON DUPLICATE KEY UPDATE (upsert)*/
 insert into bd_simulando_merge.inventario (produto_id, nome, quantidade)
-    values (1, 'Produto A', 25), (2, 'Produto B', 35)
+    values (1, 'Produto A', 35), (2, 'Produto B', 45)
         on duplicate key update
             quantidade = values(quantidade), nome = values(nome);
 
