@@ -1,12 +1,17 @@
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import './App.css'
+import Configuracao from './components/Configuracao';
 import Cadastro from './components/Cadastro';
-import React from 'react';
+
 
 function App() {
   return (
-    <div>
-      <Cadastro />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Configuracao />} />
+        <Route path="/cadastro" element={<Cadastro />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
