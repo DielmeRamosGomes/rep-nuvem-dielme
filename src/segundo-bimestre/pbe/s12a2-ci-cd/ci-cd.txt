@@ -1,0 +1,53 @@
+Velocidade e Agilidade:
+
+Feedback Rápido: Em um pipeline de CI/CD, cada alteração no código (commit) 
+dispara um conjunto de testes automatizados. Se os testes falharem, o 
+desenvolvedor recebe um feedback quase instantâneo sobre o problema, 
+permitindo que a correção seja feita imediatamente. Isso é crucial para a
+ Integração Contínua, que prega integrações frequentes e rápidas.
+Ciclos de Lançamento Rápidos: Sem testes automatizados, a verificação da 
+qualidade de cada alteração seria um processo manual demorado, inviabilizando
+ a entrega contínua de software em curtos períodos. A automação permite que 
+ o software esteja sempre em um estado "pronto para produção".
+Qualidade e Confiabilidade:
+
+Detecção Precoce de Bugs (Shift Left): Testes automatizados são executados 
+em cada estágio do pipeline, desde o unitário até o de integração e ponta 
+a ponta. Isso permite que os bugs sejam identificados e corrigidos nas fases 
+iniciais do desenvolvimento, onde são mais fáceis e baratos de consertar. 
+Isso evita que problemas se propaguem para as fases posteriores, como 
+homologação e produção.
+Redução de Erros Humanos: Processos manuais de teste são propensos a 
+erros e inconsistências. A automação elimina essa variabilidade, garantindo 
+que os mesmos testes sejam executados da mesma forma, sempre.
+Garantia de Qualidade Contínua: Com testes automatizados, é possível 
+garantir que novas funcionalidades e correções não introduzam "regressões"
+ (bugs que afetam funcionalidades que antes funcionavam).
+Redução de Custos:
+
+Menos Retrabalho: Corrigir bugs em produção é exponencialmente mais caro 
+do que corrigi-los em desenvolvimento. A detecção precoce de problemas 
+através da automação de testes minimiza o retrabalho e os custos associados 
+a ele.
+Otimização do Tempo da Equipe: A automação libera os testadores e 
+desenvolvedores de tarefas repetitivas e monótonas de execução de testes, 
+permitindo que eles se concentrem em atividades de maior valor, como a 
+criação de novos recursos, a exploração de cenários complexos ou a melhoria
+ da arquitetura.
+
+Colaboração e Confiança:
+
+Confiança nas Alterações: Quando um desenvolvedor faz um commit, ele tem a 
+confiança de que o pipeline de CI/CD, com seus testes automatizados, 
+verificará a integridade do código e alertará sobre qualquer problema. Isso 
+fomenta uma cultura de colaboração e responsabilidade compartilhada.
+Visibilidade e Transparência: O status dos testes é visível para toda a 
+equipe, oferecendo transparência sobre a qualidade do código e o andamento 
+do desenvolvimento.
+Habilitador da Entrega Contínua (CD):
+
+Para que a Entrega Contínua seja eficaz, a confiança de que o software pode 
+ser implantado em produção a qualquer momento é primordial. Essa confiança
+ só pode ser alcançada com uma suíte de testes automatizados abrangente e 
+ confiável. Sem automação de testes, o "CD" se torna um processo manual, 
+ lento e arriscado.

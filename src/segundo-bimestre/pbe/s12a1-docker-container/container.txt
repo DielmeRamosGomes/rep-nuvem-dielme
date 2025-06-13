@@ -1,0 +1,37 @@
+Containers
+
+Isolamento e Empacotamento Completo:
+    Com containers, você empacota não apenas o código da sua aplicação, mas 
+    todas as suas dependências (bibliotecas, frameworks, configurações, 
+    versões de linguagens, etc.) e até mesmo partes do sistema operacional 
+    (sistema de arquivos, pilha de rede) em uma única "imagem" leve e 
+    portátil. Isso significa que tudo o que a aplicação precisa para rodar 
+    está contido no container.
+
+Eliminação do "Funciona na minha máquina": 
+    O problema clássico de 
+    desenvolvimento onde algo funciona na máquina do desenvolvedor, mas 
+    falha em outro ambiente (testes, homologação, produção) é praticamente 
+    erradicado. O container garante que o ambiente de execução da aplicação é o 
+    mesmo em todos os lugares.
+
+Portabilidade Universal:
+    Uma vez que a imagem do container é construída, ela pode ser executada 
+    em qualquer máquina que possua um motor de container (como o Docker), 
+    independentemente do sistema operacional subjacente (Linux, Windows, 
+    macOS). Isso simplifica a movimentação da aplicação entre diferentes 
+    ambientes, desde o notebook do desenvolvedor até os servidores de 
+    produção na nuvem ou on-premise.
+
+Reproducibilidade:
+
+Imagens Imutáveis: 
+    As imagens de container são, por natureza, imutáveis. 
+    Uma vez construídas, elas não mudam. Isso garante que cada instância de um 
+    container (um "contêiner em execução") é idêntica à imagem original.
+
+Controle de Versão:
+    As imagens podem ser versionadas e armazenadas em registros (como Docker 
+    Hub ou AWS ECR), permitindo que você controle exatamente qual versão de 
+    um container está sendo usada em cada ambiente. Isso facilita o rollback 
+    para versões anteriores e a auditoria das implantações.
