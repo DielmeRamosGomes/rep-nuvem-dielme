@@ -1,0 +1,16 @@
+{
+    "name": "usando-docker-node-app",
+    "version": "1.0.0",
+    "description": "Exemplo de aplicação Node.js usando Docker",
+    "main": "app.js",
+    "scripts": {
+        "start": "node src/app.js"
+    },
+    "keywords":[],
+    "author": "",
+    "license": "ISC"
+}
+
+
+
+

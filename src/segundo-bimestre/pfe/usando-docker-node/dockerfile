@@ -1,0 +1,22 @@
+# usando imagem docker
+# usa uma imagem docker
+FROM node:20
+
+# define o diretório de trabalho
+WORKDIR /c/Users/DielmeRamosGomes/Desktop/rep-local-dielme/src/segundo-bimestre/pfe/usando-docker-node/src/app
+
+# copia os arquivos package.json e package-lock.json para o diretório de trabalho
+COPY package*.json ./
+
+# instala as dependências do projeto
+RUN npm install --production
+
+# copia o restante dos arquivos do projeto para o diretório de trabalho
+COPY . .
+
+# exporta a porta que a aplicação irá rodar
+EXPOSE 3000
+
+# define o comando para iniciar a aplicação
+CMD ["node", "start.js"]
+
