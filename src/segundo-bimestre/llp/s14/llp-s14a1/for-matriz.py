@@ -8,7 +8,7 @@ def exibir_matriz(matriz):
             print(f"matriz_aleatoria[{matriz.index(linha)}][{linha.index(coluna)}] = {matriz[matriz.index(linha)][linha.index(coluna)]}", end=" ")
             print('\n')
 
-exibir_matriz(matriz)
+exibir_matriz(matriz_aleatoria)
 
 # 1 2 3
 # 4 5 6
