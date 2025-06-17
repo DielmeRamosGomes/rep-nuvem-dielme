@@ -7,7 +7,7 @@ CREATE TABLE db_tech_dynamics.produtos (
     estoque INT not null
 );
 
--- Importando dados do arquivo CSV para a tabela produtos
+-- Importando dados do arquivos CSV para a tabela produtos
 load data infile 'D:\programas-no-visual-studio-code\\NodeJs\\rep-local-dielme\\src\\segundo-bimestre\\modelagem-de-banco-de-dados\\s11\\produtos.csv'
     into table db_tech_dynamics.produtos
         fields terminated by ','
