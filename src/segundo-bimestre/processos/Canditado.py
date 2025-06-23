@@ -33,9 +33,9 @@ class Candidato:
         print(f"Nome do Candidato: {self.__nome_candidato}")
         print(f"Nome do Vice Candidato: {self.__nome_vice_candidato}")
         print(f"Nome do Partido: {self.__nome_partido}")
-        print(f"Número do Partido: {self.__numero_partido}")
+        print(f"Número do Partido: {self.__numero_partido} \n")
 
 candidato = Candidato("Guilherme", "Rafael", "Partido Verde", 12345)
-print("Dados do Candidato:")
+print("Dados do Candidato: \n")
 candidato.monstrarDados()
 
