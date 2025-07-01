@@ -14,7 +14,7 @@ def main():
     print(f"Entre com o Email e a Senha para acessar o banco.\n")
     email = input("Email: ")
     senha = input("Senha: ")
-    if email == usuario.getEmail() and senha == usuario.getSenha():
+    if email == conta.getUsuario().getEmail() and senha == conta.getUsuario().getSenha():
         print(f"Bem-vindo ao Banco, {usuario.getNome()}!")
 
 if __name__=="__main__":

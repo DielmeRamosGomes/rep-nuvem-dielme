@@ -22,4 +22,5 @@ class Conta:
         else:
             self.__saldo = valor
         
-        
+    def getUsuario(self):
+        return self.usuario
