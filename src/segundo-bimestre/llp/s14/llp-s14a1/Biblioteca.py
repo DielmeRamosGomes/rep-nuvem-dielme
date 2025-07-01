@@ -49,8 +49,11 @@ class Biblioteca(FuncionalidadesBiblioteca):
     
     def mostrar_emprestimo(self, emprestimo):
         usuario = self.buscar_usuario(emprestimo.getCodigoUsuario())
-        
-        
+        livro = self.buscar_livro(emprestimo.getCodigoLivro())
+        print(f"Usuário: {usuario.getNome()} (Código: {usuario.getCodigoUsuario()})")
+        print(f"Livro: {livro.getTitulo()} (Código: {livro.getCodigo()})")
+        print(f"Data de Empréstimo: {emprestimo.getDataEmprestimo()}")
+        print(f"Data de Devolução: {emprestimo.getDataDevolucao()}")
         
     def adicionar_emprestimo(self, emprestimo):
             self.__emprestimos.append(emprestimo)
@@ -178,6 +181,15 @@ class Emprestimo:
     def getCodigoUsuario(self):
         return self.__codigo_usuario
     
+    def getCodigoLivro(self):
+        return self.__codigo_livro
+    
+    def getDataEmprestimo(self):
+        return self.__data_emprestimo
+    
+    def getDataDevolucao(self):
+        return self.__data_devolucao
+    
 biblioteca = Biblioteca()
 usuario = Usuario(1, "Dielme", "dielme@exemplo.com", "1234")    
 livro = Livros(1, "Aprendendo Python", "Azuma", "2025", "Livro sobre Python")
@@ -187,6 +199,8 @@ biblioteca.adicionar_usuario(usuario)
 biblioteca.adicionar_livro(livro)
 biblioteca.adicionar_livro(livro2)
 biblioteca.adicionar_emprestimo(emprestimo)
+
+biblioteca.getLivros()
 
 
 
