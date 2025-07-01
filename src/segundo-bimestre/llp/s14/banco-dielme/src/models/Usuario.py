@@ -34,4 +34,4 @@ class Usuario:
         self.__senha = senha
         
     def mostrar_usuario(self):
-        return f"Código: {self.getCodigoUsuario()}, Nome: {self.getNome()}, Email: {self.getEmail()}"
+        return f"\n Código: {self.getCodigoUsuario()}, Nome: {self.getNome()}, Email: {self.getEmail()}\n"
