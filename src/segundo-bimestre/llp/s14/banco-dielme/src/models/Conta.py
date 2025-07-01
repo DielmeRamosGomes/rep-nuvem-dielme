@@ -4,7 +4,7 @@ class Conta:
     def __init__(self, agencia: str, numero: str, usuario: Usuario, saldo: float):
         self.__agencia = agencia
         self.__numero = numero
-        self.usuario = usuario
+        self.__usuario = usuario
         self.__saldo = self.__setSaldo(saldo)
         
     def getAgencia(self):
@@ -23,4 +23,4 @@ class Conta:
             self.__saldo = valor
         
     def getUsuario(self):
-        return self.usuario
+        return self.__usuario
