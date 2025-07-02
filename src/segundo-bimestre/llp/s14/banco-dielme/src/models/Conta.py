@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
+
 from src.models.Usuario import Usuario
 
 class Conta:
@@ -21,6 +25,8 @@ class Conta:
             self.__saldo = 50.0
         else:
             self.__saldo = valor
+        return self.__saldo
         
     def getUsuario(self):
         return self.__usuario
+    

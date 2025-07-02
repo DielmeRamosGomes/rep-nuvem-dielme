@@ -19,8 +19,9 @@ def main():
     print(f"Entre com o Email e a Senha para acessar o banco.\n")
     email = input("Email: ")
     senha = input("Senha: ")
+    #email = "dielme@exemplo.com"
+    #senha = "1234"
     print(banco.listar_conta(email, senha))
-    
     
 if __name__=="__main__":
      main()
