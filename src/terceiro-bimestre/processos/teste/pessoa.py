@@ -23,8 +23,10 @@ class Pessoa:
         self.__ativo = ativo
         
     def mostrar_dados(self):
-        print(f"Nome: {self.__nome}, Idade: {self.__idade}, Ativo: {self.__ativo} \n")
+        print(f"\n Nome: {self.__nome}, Idade: {self.__idade}, Ativo: {self.__ativo} \n")
 
 pessoa = Pessoa('Carlos', 31, True)
+pessoa2 = Pessoa('João', 25, False)
 pessoa.mostrar_dados()
+pessoa2.mostrar_dados()
 
