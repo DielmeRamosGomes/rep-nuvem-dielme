@@ -32,8 +32,16 @@ select nome, email from db_recuperacao.clientes;
 update db_recuperacao.clientes set idade = 70
     where id = 2 and email = "bolsonaro@exemplo.com";
 
-delete from db_recuperacao.clientes
-    where id = 2;
+update db_recuperacao.clientes set nome = "Dilma Rousseff"
+    where id = 1 and email = "robson@exemplo.com";
+
+update db_recuperacao.clientes set email = "dilma@exemplo.com"
+    where id = 1;
+
+update db_recuperacao.clientes set idade = 65
+    where id = 1 and email = "dilma@exemplo.com";
+
+
 
 
 
