@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container">
+      <form action="">
+        <div class="input-radio-group">
+            <label for="user1">Administrador: </label>
+            <input id="user1" type="radio" name="user" class="users">
+            
+            <label for="user2">Gerente: </label>
+            <input id="user2" type="radio" name="user" class="users">
+            
+            <label for="user3">Funcionário: </label>
+            <input id="user3" type="radio" name="user" class="users">
+        </div>
+        <div class="button-group">
+          <label for="email">Email: </label>
+          <input class="input-email-senha" type="email" name="email" value="" required />
+        </div>
+        <div class="button-group">
+          <label for="password">Senha: </label>
+          <input class="input-email-senha" type="password" name="password" value="" required />
+        </div>
+        <button class="button-login" type="submit">login</button>
+        
+    </form>
+    </div>
+
+    <script src="./js/login.js"></script>
+  </body>
+</html>
