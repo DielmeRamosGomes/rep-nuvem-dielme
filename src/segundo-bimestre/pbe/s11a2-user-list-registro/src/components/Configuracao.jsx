@@ -23,7 +23,7 @@ function Configuracao() {
             navigate('/usuario');
         }
 
-        console.log(`Usuário selecionado: ${usuarioSelecionado}`);
+        console.log(`Autoridade selecionada: ${usuarioSelecionado}`);
 
     };
 

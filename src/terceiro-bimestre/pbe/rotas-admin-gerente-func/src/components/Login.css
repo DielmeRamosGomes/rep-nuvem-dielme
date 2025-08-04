@@ -1,0 +1,42 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: top;
+}
+
+.login-container .login-form .form-group {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  margin-bottom: 15px;
+  gap: 8px;
+}
+
+.login-button{
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.20s ease;
+}
+
+.login-button:hover {
+    border-color: rgb(59, 59, 163);
+}
+
+.login-container .login-form .form-group-radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 4px;
+}
+
+.login-container .login-form .form-group-radio .user-options {
+  align-items: center;
+  justify-content: center;
+}
+

@@ -10,7 +10,7 @@ function Cadastro() {
       usuarios.forEach((usuario) => {
         console.log(`  Cargo: ${usuario.cargo}, Nome: ${usuario.nome}, Email: ${usuario.email}`);
       });
-      console.log("--------------------------------------------");
+      console.log("-------------------------------------------------------");
     }
   }, [usuarios]); // O array de dependências '[usuarios]' faz com que o useEffect rode quando 'usuarios' mudar.
 
