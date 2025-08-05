@@ -45,6 +45,11 @@ loginButton.addEventListener("click", (event) => {
       alert(
         `Login bem-sucedido!\n Bem vindo! ${users[i].nome} \n Redirecionando para a página do usuário ${users[i].cargo}`
       );
+      userAdmin.checked = false;
+      userGerente.checked = false;
+      userFuncionario.checked = false;
+      emailInput.value = "";
+      passwordInput.value = "";
       return;
     }
   }
