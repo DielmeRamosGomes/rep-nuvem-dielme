@@ -1,9 +1,9 @@
-const userAdmin = document.querySelector('#user1');
-const userGerente = document.querySelector('#user2');
-const userFuncionario = document.querySelector('#user3');
+const userAdmin = document.querySelector("#user1");
+const userGerente = document.querySelector("#user2");
+const userFuncionario = document.querySelector("#user3");
 
-const emailInput = document.querySelector('#email');
-const passwordInput = document.querySelector('#password');
+const emailInput = document.querySelector("#email");
+const passwordInput = document.querySelector("#password");
 
 const loginButton = document.querySelector(".button-login");
 
@@ -33,7 +33,7 @@ loginButton.addEventListener("click", (event) => {
 
   const email = emailInput.value;
   const password = passwordInput.value;
-  
+
   for (let i = 0; i < users.length; i++) {
     if (
       users[i].email === email &&
@@ -54,4 +54,9 @@ loginButton.addEventListener("click", (event) => {
     }
   }
   alert("Email ou senha incorretos. Tente novamente.");
+  userAdmin.checked = false;
+  userGerente.checked = false;
+  userFuncionario.checked = false;
+  emailInput.value = "";
+  passwordInput.value = "";
 });
