@@ -13,20 +13,20 @@ const passwordInput = document.querySelector(
 
 const loginButton = document.querySelector(".button-login");
 
-users = {
-  admin: {
+users = [
+  {
     email: "dielme@example.com",
     password: "123"
   },
-  gerente: {
+ {
     email: "maria@example.com",
     password: "1234"
   },
-  funcionario: {
+   {
     email: "joao@example.com",
     password: "12345"
   }
-}
+]
 
 loginButton.addEventListener("click", (event) => {
   event.preventDefault();
