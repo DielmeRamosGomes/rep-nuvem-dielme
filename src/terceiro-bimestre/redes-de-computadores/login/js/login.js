@@ -16,17 +16,17 @@ const loginButton = document.querySelector(".button-login");
 users = [
   {
     email: "dielme@example.com",
-    password: "123"
+    password: "123",
   },
- {
+  {
     email: "maria@example.com",
-    password: "1234"
+    password: "1234",
   },
-   {
+  {
     email: "joao@example.com",
-    password: "12345"
-  }
-]
+    password: "12345",
+  },
+];
 
 loginButton.addEventListener("click", (event) => {
   event.preventDefault();
@@ -34,9 +34,12 @@ loginButton.addEventListener("click", (event) => {
   const email = emailInput.value;
   const password = passwordInput.value;
 
-  if (email === user.email && password === user.password && (userAdmin.checked || userGerente.checked || userFuncionario.checked)) {
-    alert(`Bem-vindo, ${user.name}! Você está logado como ${user.cargo}.`);
-  } else {
-    alert("Por favor, selecione um cargo.");
+  for (let i = 0; i < users.length; i++) {
+    if (users[i].email === email && users[i].password === password) {
+      alert("Login bem-sucedido!");
+      return;
+    }
   }
+  alert("Email ou senha incorretos. Tente novamente.");
+  
 });
