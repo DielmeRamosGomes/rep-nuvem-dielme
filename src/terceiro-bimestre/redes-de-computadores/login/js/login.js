@@ -1,29 +1,29 @@
-const userAdmin = document.querySelector('.users[type="radio"]:nth-child(1)');
-const userGerente = document.querySelector('.users[type="radio"]:nth-child(2)');
-const userFuncionario = document.querySelector(
-  '.users[type="radio"]:nth-child(3)'
-);
+const userAdmin = document.querySelector('#user1');
+const userGerente = document.querySelector('#user2');
+const userFuncionario = document.querySelector('#user3');
 
-const emailInput = document.querySelector(
-  'input-email-senha[type="email"]:nth-child(1)'
-);
-const passwordInput = document.querySelector(
-  'input-password-senha[type="password"]:nth-child(2)'
-);
+const emailInput = document.querySelector('#email');
+const passwordInput = document.querySelector('#password');
 
 const loginButton = document.querySelector(".button-login");
 
-users = [
+const users = [
   {
-    email: "dielme@example.com",
+    nome: "Dielme",
+    cargo: "Administrador",
+    email: "dielme@exemplo.com",
     password: "123",
   },
   {
-    email: "maria@example.com",
+    nome: "Maria",
+    cargo: "Gerente",
+    email: "maria@exemplo.com",
     password: "1234",
   },
   {
-    email: "joao@example.com",
+    nome: "João",
+    cargo: "Funcionario",
+    email: "joao@exemplo.com",
     password: "12345",
   },
 ];
@@ -33,13 +33,20 @@ loginButton.addEventListener("click", (event) => {
 
   const email = emailInput.value;
   const password = passwordInput.value;
-
+  
   for (let i = 0; i < users.length; i++) {
-    if (users[i].email === email && users[i].password === password) {
-      alert("Login bem-sucedido!");
+    if (
+      users[i].email === email &&
+      users[i].password === password &&
+      ((users[i].cargo === "Administrador" && userAdmin.checked) ||
+        (users[i].cargo === "Gerente" && userGerente.checked) ||
+        (users[i].cargo === "Funcionario" && userFuncionario.checked))
+    ) {
+      alert(
+        `Login bem-sucedido!\n Bem vindo! ${users[i].nome} \n Redirecionando para a página do usuário ${users[i].cargo}`
+      );
       return;
     }
   }
   alert("Email ou senha incorretos. Tente novamente.");
-  
 });
