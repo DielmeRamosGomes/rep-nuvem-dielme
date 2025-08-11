@@ -25,7 +25,7 @@ const users = [
     cargo: "Funcionario",
     email: "joao@exemplo.com",
     password: "12345",
-  },
+  }
 ];
 
 loginButton.addEventListener("click", (event) => {

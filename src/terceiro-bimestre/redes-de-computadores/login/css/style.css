@@ -68,7 +68,7 @@ input:hover {
   transition: all 0.3s ease;
 }
 
-.h1-title {
+.container .h1-title {
   font-family: inherit;
   color: white;
   font-size: 2rem;
