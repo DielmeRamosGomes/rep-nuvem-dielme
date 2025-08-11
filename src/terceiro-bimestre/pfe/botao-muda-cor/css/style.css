@@ -31,3 +31,18 @@
     margin-top: 10px;
 }
 
+.container .button-cor {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-family: inherit;
+    color: white;
+    background-color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.container .button-cor:hover {
+    background-color: #007BFF;
+}
