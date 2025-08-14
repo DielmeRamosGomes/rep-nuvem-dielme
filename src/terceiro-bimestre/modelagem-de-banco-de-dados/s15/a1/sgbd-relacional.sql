@@ -58,12 +58,9 @@ values
 
 end;
 
-call db_tech_solutions.adicionar_cliente ('Dielme Ramos', 'dielme@exemplo.com', '123456');
+call db_tech_solutions.adicionar_cliente ('robson', 'robson@exemplo.com', '1234567');
 
-select
-    *
-from
-    db_tech_solutions.clientes;
+select * from db_tech_solutions.clientes;
 
 create procedure if not exists db_tech_solutions.adicionar_produto (
     in ap_nome varchar(100),
