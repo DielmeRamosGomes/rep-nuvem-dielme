@@ -1,0 +1,92 @@
+.container .h1-title {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    width: 500px;
+    height: 500px;
+    grid-template-areas:
+        "a b c"
+        "d e f"
+        "g h i";
+}
+
+.celula1 {
+    grid-area: a;
+    background-color: red;
+    text-align: center;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+}
+
+#paragrafo-celula1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-size: 50px;    
+}
+
+.celula2 {
+    grid-area: b;
+    background-color: blue;
+    text-align: center;
+    cursor: pointer;
+}
+
+.celula3 {
+    grid-area: c;
+    background-color: green;
+    text-align: center;
+    cursor: pointer;
+}
+
+.celula4 {
+    grid-area: d;
+    background-color: yellow;
+    text-align: center;
+    cursor: pointer;
+}
+
+.celula5 {
+    grid-area: e;
+    background-color: purple;
+    text-align: center;
+    cursor: pointer;
+}
+
+.celula6 {
+    grid-area: f;
+    background-color: orange;
+    text-align: center;
+    cursor: pointer;
+}
+
+.celula7 {
+    grid-area: g;
+    background-color: pink;
+    text-align: center;
+    cursor: pointer;
+}
+
+.celula8 {
+    grid-area: h;
+    background-color: cyan;
+    text-align: center;
+    cursor: pointer;
+}
+
+.celula9 {
+    grid-area: i;
+    background-color: lime;
+    text-align: center;
+    cursor: pointer;
+}
+
+

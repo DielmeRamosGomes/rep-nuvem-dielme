@@ -13,26 +13,28 @@
 
 .header {
     grid-area: header;
-    background-color: #f0f0f0;
+    background-color: rgba(224, 14, 7, 0.822);
     padding: 20px;
     text-align: center;
 }
 
 .menu {
     grid-area: menu;
-    background-color: #dcdcdc;
+    background-color: #1fa340;
     padding: 20px;
+    text-align: center;
 }
 
 .main {
     grid-area: main;
-    background-color: #ffffff;
+    background-color: #132fa8;
     padding: 20px;
+    text-align: center;
 }
 
 .footer {
     grid-area: footer;
-    background-color: #f0f0f0;
+    background-color: #c212b3;
     padding: 20px;
     text-align: center;
 }
