@@ -1,6 +1,6 @@
 .container .h1-title {
     font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .grid-container {
@@ -40,11 +40,27 @@
     cursor: pointer;
 }
 
+#paragrafo-celula2 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-size: 50px;    
+}
+
 .celula3 {
     grid-area: c;
     background-color: green;
     text-align: center;
     cursor: pointer;
+}
+
+#paragrafo-celula3 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-size: 50px;    
 }
 
 .celula4 {
@@ -54,11 +70,27 @@
     cursor: pointer;
 }
 
+#paragrafo-celula4 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-size: 50px;    
+}
+
 .celula5 {
     grid-area: e;
     background-color: purple;
     text-align: center;
     cursor: pointer;
+}
+
+#paragrafo-celula5 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-size: 50px;    
 }
 
 .celula6 {
@@ -68,11 +100,27 @@
     cursor: pointer;
 }
 
+#paragrafo-celula6 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-size: 50px;    
+}
+
 .celula7 {
     grid-area: g;
     background-color: pink;
     text-align: center;
     cursor: pointer;
+}
+
+#paragrafo-celula7 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-size: 50px;    
 }
 
 .celula8 {
@@ -82,6 +130,14 @@
     cursor: pointer;
 }
 
+#paragrafo-celula8 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-size: 50px;    
+}
+
 .celula9 {
     grid-area: i;
     background-color: lime;
@@ -89,4 +145,39 @@
     cursor: pointer;
 }
 
+#paragrafo-celula9 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-size: 50px;    
+}
 
+#vencedor {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-size: 30px;
+    margin-bottom: 5px; 
+}
+
+.button-reset {
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;   
+    border-radius: 8px;
+    text-align: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 2px 2px;
+    margin-bottom: 5px;
+}
+
+.button-reset:hover {
+    background-color: rgb(16, 16, 204);
+    transition: all 0.3s ease-in-out;
+    color: black;
+}
