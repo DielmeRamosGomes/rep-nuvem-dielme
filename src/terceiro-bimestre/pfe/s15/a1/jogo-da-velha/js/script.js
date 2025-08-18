@@ -52,56 +52,70 @@ function verificaPosicao() {
 }
 
 function verificaGanhador() {
+    let ganhou = false;
     if (statusJogador[0] === "X" && statusJogador[1] === "X" && statusJogador[2] === "X") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns X é Vencedor!";
     }
     else if (statusJogador[0] === "O" && statusJogador[1] === "O" && statusJogador[2] === "O") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns O é Vencedor!";
     }
     else if (statusJogador[3] === "X" && statusJogador[4] === "X" && statusJogador[5] === "X") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns X é Vencedor!";
     }
     else if (statusJogador[3] === "O" && statusJogador[4] === "O" && statusJogador[5] === "O") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns O é Vencedor!";
     }
     else if (statusJogador[6] === "X" && statusJogador[7] === "X" && statusJogador[8] === "X") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns X é Vencedor!";
     }
     else if (statusJogador[6] === "O" && statusJogador[7] === "O" && statusJogador[8] === "O") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns O é Vencedor!";
     }
     else if (statusJogador[0] === "X" && statusJogador[3] === "X" && statusJogador[6] === "X") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns X é Vencedor!";
     }
     else if (statusJogador[0] === "O" && statusJogador[3] === "O" && statusJogador[6] === "O") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns O é Vencedor!";
     }
     else if (statusJogador[1] === "X" && statusJogador[4] === "X" && statusJogador[7] === "X") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns X é Vencedor!";
     }
     else if (statusJogador[1] === "O" && statusJogador[4] === "O" && statusJogador[7] === "O") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns O é Vencedor!";
     }
     else if (statusJogador[2] === "X" && statusJogador[5] === "X" && statusJogador[8] === "X") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns X é Vencedor!";
     }
     else if (statusJogador[2] === "O" && statusJogador[5] === "O" && statusJogador[8] === "O") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns O é Vencedor!";
     }
     else if (statusJogador[0] === "X" && statusJogador[4] === "X" && statusJogador[8] === "X") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns X é Vencedor!";
     }
     else if (statusJogador[0] === "O" && statusJogador[4] === "O" && statusJogador[8] === "O") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns O é Vencedor!";
     }
     else if (statusJogador[2] === "X" && statusJogador[4] === "X" && statusJogador[6] === "X") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns X é Vencedor!";
     }
     else if (statusJogador[2] === "O" && statusJogador[4] === "O" && statusJogador[6] === "O") {
+        ganhou = true;
         paragrafoVencedor.textContent = "Parabéns O é Vencedor!";
-    }
-    else {
-        paragrafoVencedor.textContent = "Deu Velha!";
     }
 }
 
