@@ -17,7 +17,8 @@
         "mindrot",
         "mudar",
         "registro",
-        "Solicita"
+        "Solicita",
+        "válido"
     ],
     "sqltools.connections": [
         {
