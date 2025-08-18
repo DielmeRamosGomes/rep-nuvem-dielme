@@ -196,8 +196,34 @@ from
     join db_tech_solutions.item_venda i on v.id = i.venda_id
     join db_tech_solutions.produtos p on i.produto_id = p.id
 where
-    v.id = aux_venda_id
-group by
-    total desc;
+    v.id = aux_venda_id;
 
 end;
+
+call db_tech_solutions.soma_total_de_uma_venda(1);
+
+select
+    *
+from
+    db_tech_solutions.clientes;
+
+select
+    *
+from
+    db_tech_solutions.produtos;
+
+select
+    *
+from
+    db_tech_solutions.vendas;
+
+select
+    *
+from
+    db_tech_solutions.item_venda;
+
+select
+    *
+from
+    db_tech_solutions.endereco;
+
