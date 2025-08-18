@@ -17,8 +17,9 @@ class Perfil():
         self.__curtidas += 1
 
 perfil_douglas = Perfil("Douglas Silva", "@douglinha")
-perfil_douglas.set_curtidas()
-perfil_douglas.set_curtidas()
-perfil_douglas.set_curtidas()
+
+for i in range(1, 11):
+    perfil_douglas.set_curtidas()
+
 print(f"\nO perfil {perfil_douglas.get_nome_da_conta()} tem um número de curtidas igual a {perfil_douglas.get_curtidas()}")
 
