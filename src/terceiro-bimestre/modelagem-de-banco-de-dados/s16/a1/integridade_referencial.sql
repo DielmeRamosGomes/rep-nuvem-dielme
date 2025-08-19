@@ -50,20 +50,15 @@ create procedure if not exists db_tech_solutions.adicionar_cliente (
     in ac_nome varchar(100),
     in ac_email varchar(100),
     in ac_senha varchar(100)
-) begin
-insert into
-    db_tech_solutions.clientes (nome, email, senha)
-values
-    (ac_nome, ac_email, ac_senha);
-
+    )
+begin
+    insert into db_tech_solutions.clientes (nome, email, senha)
+        values(ac_nome, ac_email, ac_senha);
 end;
 
 call db_tech_solutions.adicionar_cliente ('robson', 'robson@exemplo.com', '1234567');
 
-select
-    *
-from
-    db_tech_solutions.clientes;
+select * from db_tech_solutions.clientes;
 
 create procedure if not exists db_tech_solutions.adicionar_produto (
     in ap_nome varchar(100),
@@ -78,49 +73,35 @@ values
 end;
 
 call db_tech_solutions.adicionar_produto ('Cadeira', 'Cadeira Gamer', 500.00);
+call db_tech_solutions.adicionar_produto ('notebook', 'notebook Gamer', 4500.00);
 
-select
-    *
-from
-    db_tech_solutions.produtos;
+select * from db_tech_solutions.produtos;
 
-create procedure if not exists db_tech_solutions.realizar_venda (in rv_cliente_id int, in rv_data_venda datetime) begin
-insert into
-    db_tech_solutions.vendas (cliente_id, data_venda)
-values
-    (rv_cliente_id, rv_data_venda);
-
+create procedure if not exists db_tech_solutions.realizar_venda (in rv_cliente_id int, in rv_data_venda datetime) 
+begin
+    insert into db_tech_solutions.vendas (cliente_id, data_venda)
+        values(rv_cliente_id, rv_data_venda);
 end;
 
 call db_tech_solutions.realizar_venda (1, '2025-08-05 10:00:00');
-
 call db_tech_solutions.realizar_venda (1, '2025-08-06 11:00:00');
 
-select
-    *
-from
-    db_tech_solutions.vendas;
+select * from db_tech_solutions.vendas;
 
 create procedure if not exists db_tech_solutions.adicionar_item_venda (
     in aiv_produto_id int,
     in aiv_venda_id int,
     in aiv_quantidade int
-) begin
-insert into
-    db_tech_solutions.item_venda (produto_id, venda_id, quantidade)
-values
-    (aiv_produto_id, aiv_venda_id, aiv_quantidade);
-
+) 
+begin
+    insert into db_tech_solutions.item_venda (produto_id, venda_id, quantidade)
+        values (aiv_produto_id, aiv_venda_id, aiv_quantidade);
 end;
 
 call db_tech_solutions.adicionar_item_venda (1, 1, 2);
-
 call db_tech_solutions.adicionar_item_venda (2, 1, 3);
 
-select
-    *
-from
-    db_tech_solutions.item_venda;
+select * from db_tech_solutions.item_venda;
 
 create procedure if not exists db_tech_solutions.adicionar_endereco (
     in ae_cliente_id int,
@@ -129,101 +110,69 @@ create procedure if not exists db_tech_solutions.adicionar_endereco (
     in ae_cidade varchar(50),
     in ae_estado varchar(50),
     in ae_cep varchar(10)
-) begin
-insert into
-    db_tech_solutions.endereco (cliente_id, rua, numero, cidade, estado, cep)
-values
-    (
-        ae_cliente_id,
-        ae_rua,
-        ae_numero,
-        ae_cidade,
-        ae_estado,
-        ae_cep
-    );
-
+    ) 
+begin
+    insert into db_tech_solutions.endereco (cliente_id, rua, numero, cidade, estado, cep)
+        values(ae_cliente_id, ae_rua, ae_numero, ae_cidade, ae_estado, ae_cep);
 end;
 
-call db_tech_solutions.adicionar_endereco (
-    1,
-    'Rua Exemplo',
-    '123',
-    'Cidade Exemplo',
-    'Estado Exemplo',
-    '12345-678'
-);
+call db_tech_solutions.adicionar_endereco (1, 'Rua Exemplo', '123', 'Cidade Exemplo', 'Estado Exemplo', '12345-678');
+call db_tech_solutions.adicionar_endereco (1, 'Avenida Teste', '456', 'Outra Cidade', 'Outro Estado', '87654-321');
 
-call db_tech_solutions.adicionar_endereco (
-    1,
-    'Avenida Teste',
-    '456',
-    'Outra Cidade',
-    'Outro Estado',
-    '87654-321'
-);
+select * from db_tech_solutions.endereco;
 
-select
-    *
-from
-    db_tech_solutions.endereco;
-
-create procedure if not exists db_tech_solutions.obter_vendas_por_cliente (in ovpc_cliente_id int) begin
-select
-    v.id as venda_id,
-    v.data_venda,
-    c.nome as cliente_nome,
-    i.quantidade,
-    p.nome as produto_nome,
-    p.preco_unitario
-from
-    db_tech_solutions.vendas v
-    join db_tech_solutions.clientes c on v.cliente_id = c.id
-    join db_tech_solutions.item_venda i on v.id = i.venda_id
-    join db_tech_solutions.produtos p on i.produto_id = p.id
-where
-    c.id = ovpc_cliente_id;
-
+create procedure if not exists db_tech_solutions.obter_vendas_por_cliente (in ovpc_cliente_id int) 
+begin
+    select
+        v.id as venda_id,
+        v.data_venda,
+        c.nome as cliente_nome,
+        i.quantidade,
+        p.nome as produto_nome,
+        p.preco_unitario
+    from
+        db_tech_solutions.vendas v
+        join db_tech_solutions.clientes c on v.cliente_id = c.id
+        join db_tech_solutions.item_venda i on v.id = i.venda_id
+        join db_tech_solutions.produtos p on i.produto_id = p.id
+    where
+        c.id = ovpc_cliente_id;
 end;
 
 call db_tech_solutions.obter_vendas_por_cliente (1);
 
-create procedure if not exists db_tech_solutions.soma_total_de_uma_venda (in aux_venda_id int) begin
-select
-    v.id as venda_id,
-    sum(i.quantidade * p.preco_unitario) as total
-from
-    db_tech_solutions.vendas v
-    join db_tech_solutions.item_venda i on v.id = i.venda_id
-    join db_tech_solutions.produtos p on i.produto_id = p.id
-where
-    v.id = aux_venda_id;
-
+create procedure if not exists db_tech_solutions.soma_total_de_uma_venda (in aux_venda_id int)
+begin
+    select
+        v.id as venda_id,
+        sum(i.quantidade * p.preco_unitario) as total
+    from
+        db_tech_solutions.vendas v
+        join db_tech_solutions.item_venda i on v.id = i.venda_id
+        join db_tech_solutions.produtos p on i.produto_id = p.id
+    where
+        v.id = aux_venda_id;
 end;
 
 call db_tech_solutions.soma_total_de_uma_venda(1);
 
-select
-    *
-from
-    db_tech_solutions.clientes;
+create procedure if not exists db_tech_solutions.mostrar_endereco_de_um_cliente(in aux_email varchar(100))
+begin
+    select c.nome, e.rua, e.cidade, e.estado, e.numero, e.cep
+        from db_tech_solutions.clientes c
+            join db_tech_solutions.endereco e on c.id = e.cliente_id
+                where c.email = aux_email;
+end;
 
-select
-    *
-from
-    db_tech_solutions.produtos;
+call db_tech_solutions.mostrar_endereco_de_um_cliente('dielme@exemplo.com');
 
-select
-    *
-from
-    db_tech_solutions.vendas;
+select * from db_tech_solutions.clientes;
 
-select
-    *
-from
-    db_tech_solutions.item_venda;
+select * from db_tech_solutions.produtos;
 
-select
-    *
-from
-    db_tech_solutions.endereco;
+select * from db_tech_solutions.vendas;
+
+select * from db_tech_solutions.item_venda;
+
+select * from db_tech_solutions.endereco;
 
