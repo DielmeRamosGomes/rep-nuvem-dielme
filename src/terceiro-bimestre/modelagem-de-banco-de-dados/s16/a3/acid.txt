@@ -1,7 +1,29 @@
 Propiedades ACID - Transações
 
+ACID é um conjunto de propriedades que garantem a confiabilidade 
+e integridade de transações em um sistema de banco de dados.
 
+Atomicidade - Uma transação deve ser tratada como uma unidade 
+única e indivisível. Ou todas as operações dentro de uma 
+transação são concluídas com sucesso, ou nenhuma delas é. 
+Se qualquer parte da transação falhar, o sistema deve ser 
+revertido para o estado anterior, como se a transação nunca 
+tivesse ocorrido.
 
+Consitência - Uma transação deve levar o banco de dados de um 
+estado válido a outro. Isso significa que as regras e restrições 
+do banco de dados (como chaves primárias e estrangeiras, ou outras
+restrições de integridade) não devem ser violadas.
 
+Isolamento - Múltiplas transações ocorrendo 
+simultaneamente não devem interferir umas nas outras. O resultado 
+final de várias transações paralelas deve ser o mesmo que se elas
+fossem executadas sequencialmente, uma após a outra.
+
+Durabilidade - Uma vez que uma transação é confirmada
+ (commit), suas alterações devem ser permanentes e sobreviver a 
+ falhas do sistema, como quedas de energia ou travamentos. 
+ O banco de dados precisa ter um mecanismo de recuperação que 
+ garanta que os dados não sejam perdidos.
 
 
