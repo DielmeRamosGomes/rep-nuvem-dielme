@@ -46,7 +46,7 @@ create table
         foreign key (cliente_id) references db_tech_solutions.clientes (id)
     );
 
-create procedure if not exists db_tech_solutions.adicionar_cliente (
+create procedure if not exists db_tech_solutions.adicionar_cliente(
     in ac_nome varchar(100),
     in ac_email varchar(100),
     in ac_senha varchar(100)
