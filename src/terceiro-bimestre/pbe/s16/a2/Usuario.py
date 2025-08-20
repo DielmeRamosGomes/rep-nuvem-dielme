@@ -8,16 +8,16 @@ class Usuario:
         self.__email = email
         self.__senha = senha
     
-    def __get_id(self):
+    def get_id(self):
         return self.__id
     
-    def __get_nome(self):
+    def get_nome(self):
         return self.__nome
     
-    def __get_email(self):
+    def get_email(self):
         return self.__email
     
-    def __get_senha(self):
+    def get_senha(self):
         return self.__senha
     
     def get_dados(self, token):
@@ -26,10 +26,10 @@ class Usuario:
             if auth_payload.get('sub') == str(self.__id):
                 print("Token válido. Acesso concedido.")
                 return {
-                    "id": self.__get_id(),
-                    "nome": self.__get_nome(),
-                    "email": self.__get_email(),
-                    "senha": self.__get_senha()
+                    "id": self.get_id(),
+                    "nome": self.get_nome(),
+                    "email": self.get_email(),
+                    "senha": self.get_senha()
                 }
             else:
                 print("Token válido, mas pertence a outro usuário. Acesso negado.")
