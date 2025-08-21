@@ -1,0 +1,21 @@
+img {
+    height: 250px;
+    width: 250px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.container .h1-title {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 40px;
+}
+
+.group-image {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    grid-template-areas: "a b c";
+}

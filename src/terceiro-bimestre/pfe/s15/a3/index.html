@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Otimização de Performance</title>
 </head>
+
 <body>
     <div class="container">
         <h1 class="h1-title">Galeria de imagens com Lazy Loading</h1>
-        <img src="">
+        <div class="group-image">
+            <img id="imagem1" src="./assets/imagem1.jpg" alt="gatinho 1" loading="lazy">
+            <img id="imagem2" src="./assets/imagem2.jpg" alt="gatinho 2" loading="lazy">
+            <img id="imagem3" src="./assets/imagem3.jpg" alt="gatinho 3" loading="lazy">
+        </div>
     </div>
+    <script src="./js/script.js"></script>
 </body>
+
 </html>
