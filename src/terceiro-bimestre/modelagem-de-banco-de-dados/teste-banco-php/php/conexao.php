@@ -6,7 +6,7 @@
 	$user = "root";
 	$password = "";
 	$database = "db_product";
-    $port = "3306";
+    $port = "3307";
 
 	$conexao = mysqli_connect(hostname: $hostname,username: $user,password: $password,database: $database, port: $port);
 

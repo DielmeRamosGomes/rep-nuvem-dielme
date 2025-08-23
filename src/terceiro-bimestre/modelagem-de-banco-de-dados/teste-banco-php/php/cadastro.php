@@ -1,16 +1,16 @@
 <?php
 include_once "conexao.php";
 
-$id = $_POST["id"];
-$nome = $_POST["nome"];
-$preco = $_POST["price"];
+$id = $_POST["input-id"];
+$nome = $_POST["input-name"];
+$preco = $_POST["input-price"];
 
-$sql = "CALL PRODUCT_REGISTER($id, $nome, $preco);";
+$sql = "CALL PRODUCT_REGISTER(?, ?, ?);";
 
 // Preparar a declaração
 if ($stmt = $conexao->prepare($sql)) {
     // Vincular parâmetros
-    $stmt->bind_param("ssd", $id, $nome, $preco);
+    $stmt->bind_param("isd", $id, $nome, $preco);
 
     // Executar a consulta
     if ($stmt->execute()) {
