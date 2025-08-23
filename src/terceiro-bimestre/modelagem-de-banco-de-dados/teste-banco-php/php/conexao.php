@@ -8,7 +8,7 @@
 	$database = "db_product";
     $port = "3307";
 
-	$conexao = mysqli_connect(hostname: $hostname,username: $user,password: $password,database: $database, port: $port);
+	$conexao = @new mysqli($hostname, $user, $password, $database, $port);
 
 	if($conexao->connect_error){
 		die('Não foi possível conectar: '.$conexao->connect_error);

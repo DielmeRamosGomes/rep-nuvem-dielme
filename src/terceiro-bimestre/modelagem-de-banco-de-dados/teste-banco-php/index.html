@@ -12,15 +12,15 @@
       <form class="form-product" action="./php/cadastro.php" method="POST">
         <div class="group-input">
             <label id="label-id" for="input-id">ID: </label>
-            <input id="input-id" name="input-id" type="text">
+            <input id="input-id" name="input-id" type="number" required>
         </div>
         <div class="group-input">
             <label id="label-name" for="input-name">Nome: </label>
-            <input id="input-name" name="input-name" type="text">
+            <input id="input-name" name="input-name" type="text" required>
         </div>
         <div class="group-input">
             <label id="label-price" for="input-price">Preço: </label>
-            <input id="input-price" name="input-price" type="number">
+            <input id="input-price" name="input-price" type="number" required>
         </div>
         <input class="btn-register" type="submit" value="Cadastrar">
       </form>

@@ -28,5 +28,4 @@ if ($stmt = $conexao->prepare($sql)) {
 // Fechar a conexão
 $conexao->close();
 
-
 ?>
