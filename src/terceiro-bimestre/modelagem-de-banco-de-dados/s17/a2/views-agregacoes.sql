@@ -66,5 +66,13 @@ create view if not exists db_ecommerce.media_gasta_por_compra as
 
 select * from db_ecommerce.media_gasta_por_compra;
 
+-- 4) Quantas compras foram feitas em um determinado mês? 
+--(Por exemplo, para o mês de setembro de 2024.)
+--Utilizem a função COUNT para contar quantas compras foram feitas em um mês específico, usando a tabela compras. Certifiquem-se de usar a cláusula WHERE para filtrar pela data de compra.
 
+create view if not exists db_ecommerce.qtd_de_compras_mes_ano as
+    select count(*) as total_compras
+        from db_ecommerce.compras c
+            where date_format(c.data_compra, '%Y-%m') = '2025-08';
 
+select * from db_ecommerce.qtd_de_compras_mes_ano;
