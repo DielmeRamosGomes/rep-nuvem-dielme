@@ -1,7 +1,10 @@
 class Perfil():
-    def __init__(self, nome, nome_da_conta):
+    def __init__(self, id, nome, nome_da_conta, email, senha):
+        self.__id = id
         self.__nome = nome
         self.__nome_da_conta = nome_da_conta
+        self.__email = email
+        self.__senha = senha
         self.__curtidas = 0
 
     def get_nome(self):
@@ -13,7 +16,7 @@ class Perfil():
     def get_curtidas(self):
         return self.__curtidas
     
-    def set_curtidas(self):
+    def set_curtidas(self): 
         self.__curtidas += 1
 
 perfil_douglas = Perfil("Douglas Silva", "@douglinha")
