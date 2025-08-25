@@ -68,3 +68,9 @@ app.post('/cadastrarlivro', async (req, res) => {
   }
 });
 
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Servidor rodando: http://localhost:${PORT}/listarprodutos`);
+});
+
+
