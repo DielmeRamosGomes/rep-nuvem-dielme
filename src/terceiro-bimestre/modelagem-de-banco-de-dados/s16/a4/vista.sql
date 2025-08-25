@@ -32,6 +32,7 @@ create procedure if not exists db_fast_tech.add_cliente(ac_nome varchar(100), ac
     end;
 
 call db_fast_tech.add_cliente('Lucas', 'lucas@exemplo.com');
+call db_fast_tech.add_cliente('Matheus', 'matheus@exemplo.com');
 
 select * from db_fast_tech.clientes;
 
@@ -53,6 +54,9 @@ create procedure if not exists db_fast_tech.add_venda(av_id_cliente INT,av_id_pr
 
 call db_fast_tech.add_venda(1, 1, '2025-08-20', 2);
 call db_fast_tech.add_venda(1, 2, '2025-08-20', 3);
+
+call db_fast_tech.add_venda(2, 2, '2025-08-25', 4);
+
 select * from db_fast_tech.vendas;
 
 -- criando uma view relatório de vendas
@@ -63,3 +67,13 @@ CREATE VIEW db_fast_tech.relatorio_vendas AS
             JOIN db_fast_tech.produtos p ON v.id_produto = p.id;
 
 select * from db_fast_tech.relatorio_vendas;
+
+create view if not exists db_fast_tech.total_de_vendas_por_clientes as
+    select c.nome as cliente, sum(v.quantidade*p.preco) as total_da_venda
+        from db_fast_tech.vendas v
+            join db_fast_tech.clientes c on c.id = v.id_cliente
+            join db_fast_tech.produtos p on p.id = v.id_produto
+                group by cliente;
+
+select * from db_fast_tech.total_de_vendas_por_clientes;
+
