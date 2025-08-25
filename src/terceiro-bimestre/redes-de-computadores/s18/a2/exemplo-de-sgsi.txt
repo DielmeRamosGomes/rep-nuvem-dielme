@@ -1,0 +1,68 @@
+Sobre a empresa:
+A TechPlus Solutions é uma startup de tecnologia 
+especializada no desenvolvimento de aplicativos móveis e 
+soluções em nuvem para pequenas e médias empresas. Fundada
+em 2021, conta com 35 funcionários e atende clientes em 
+todo o Brasil.
+
+Objetivo da empresa:
+Garantir a segurança das informações de seus clientes e de
+seus próprios sistemas, demonstrando conformidade com 
+padrões internacionais de segurança e conquistando a 
+certificação ISO/IEC 27001 para aumentar a confiança do 
+mercado.
+
+Motivações para implementar a ISO 27001:
+Proteção contra vazamento de dados de clientes e projetos.
+Exigência de um grande cliente para contratar serviços da 
+empresa.
+Redução de riscos de ataques cibernéticos.
+Ganho de reputação e diferencial competitivo no mercado.
+
+Passos que a TechPlus está seguindo para implementar o 
+SGSI:
+
+1. Comprometimento da alta direção:
+O CEO aprovou oficialmente a iniciativa e designou um 
+responsável pelo projeto de implementação do SGSI.
+
+2. Definição do escopo:
+O escopo do SGSI abrange todos os sistemas de 
+desenvolvimento e hospedagem de aplicações da empresa.
+
+3. Levantamento de riscos:
+A equipe de TI, com apoio externo, realizou uma análise 
+de riscos identificando vulnerabilidades em servidores, 
+senhas fracas e falta de backup estruturado.
+
+4. Criação de políticas de segurança:
+Foram desenvolvidas políticas como:
+Política de controle de acesso.
+Política de backup.
+Política de uso aceitável de recursos tecnológicos.
+
+5. Capacitação dos colaboradores:
+Todos os funcionários passaram por treinamento básico de 
+conscientização sobre segurança da informação.
+
+6. Implementação de controles:
+Adoção de autenticação multifator (MFA).
+Criptografia de dados sensíveis.
+Monitoramento de logs e acesso a sistemas.
+
+7. Auditorias internas:
+Realização de auditorias internas para avaliar conformidade
+e identificar pontos de melhoria.
+
+8. Preparação para certificação:
+Contratação de uma consultoria especializada para apoio no
+processo de auditoria externa.
+
+Resultados esperados:
+Redução de incidentes de segurança.
+Conformidade com requisitos de clientes corporativos.
+Certificação ISO/IEC 27001 em até 12 meses.
+Maior maturidade em segurança da informação.
+
+
+
