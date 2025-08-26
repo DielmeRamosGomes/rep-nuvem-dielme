@@ -1,4 +1,4 @@
-def fibonacci(n):
+def fibonacci(n_esimo_termo_N):
     primeiro = 0
     segundo = 1
     if n_esimo_termo_N == 0:
@@ -10,7 +10,7 @@ def fibonacci(n):
             proximo = primeiro + segundo
             primeiro = segundo
             segundo = proximo
-            print(f"Fib({n_esimo_termo_N}) = {proximo}")
+        print(f"Fib({n_esimo_termo_N}) = {proximo}")
 
 num_caso_de_teste_T = int(input("Digite o número de casos de teste: "))
 for i in range(1, num_caso_de_teste_T+1):
