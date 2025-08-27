@@ -43,19 +43,41 @@ body {
 .frente {
   transform: translateZ(100px);
 }
+
 .tras {
   transform: translateZ(-100px) rotateY(180deg);
 }
+
 .direita {
   transform: translateX(100px) rotateY(90deg);
 }
+
 .esquerda {
   transform: translateX(-100px) rotateY(-90deg);
 }
+
 .topo {
   transform: translateY(-100px) rotateX(90deg);
 }
+
 .base {
   transform: translateY(100px) rotateX(-90deg);
 }
 
+#btn-cubo {
+  padding: 10px 20px;
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#btn-cubo:hover {
+  background-color: rgba(0, 128, 255, 0.8);
+  color: white;
+}

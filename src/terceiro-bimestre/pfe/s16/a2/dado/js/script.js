@@ -8,5 +8,5 @@ setInterval(() => {
   anguloX += 1;
   anguloY += 1;
   cubo.style.transform = `rotateX(${anguloX}deg) rotateY(${anguloY}deg)`;
-}, 30);
+}, 10);
 
