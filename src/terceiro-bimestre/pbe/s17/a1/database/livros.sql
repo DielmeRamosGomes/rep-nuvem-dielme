@@ -16,3 +16,5 @@ create procedure if not exists db_livros.add_livro(al_nome varchar(100), al_edit
 create view if not exists db_livros.mostrar_livros as
     select * from db_livros.livros;
 
+select * from db_livros.mostrar_livros;
+

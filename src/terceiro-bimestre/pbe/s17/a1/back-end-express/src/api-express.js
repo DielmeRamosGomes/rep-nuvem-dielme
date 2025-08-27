@@ -8,19 +8,14 @@ import cors from 'cors';
 import Livros from './Livros.js';
 
 const app = express();
-//const cors = cors();
 
 // use middleware cors
-app.use(cors(
-  {
-    origin: 'http://127.0.0.1:5500/src/terceiro-bimestre/pbe/s17/a1/front-end/index.html'
-  })
-);
+app.use(cors({
+  origin: 'http://127.0.0.1:5500' // Apenas a origem, sem o caminho do arquivo
+}));
 
 // Middleware para analisar o corpo da requisição como JSON
 app.use(express.json());
-
-let lista_livros = [];
 
 async function usarConexao() {
   const conexao = new Conexao('localhost', 3307, 'root', '1234', 'db_livros');
@@ -33,13 +28,10 @@ app.get('/listarlivros', (req, res) => {
   usarConexao()
     .then(connection => {
       return connection.query('select * from db_livros.mostrar_livros')
-        .then(result => {
+        .then(([rows]) => {
           connection.release();
-          return result;
+          res.json(rows);
         });
-    })
-    .then(([rows]) => {
-      res.json(rows);
     })
     .catch(error => {
       console.error('Erro ao listar livros:', error);
@@ -56,8 +48,6 @@ app.post('/cadastrarlivro', async (req, res) => {
 
   let novoLivro = new Livros(nome, editora, ano);
 
-  lista_livros.push(novoLivro);
-
   try {
     const connection = await usarConexao();
     const [rows] = await connection.query('call db_livros.add_livro(?, ?, ?)',
@@ -65,7 +55,7 @@ app.post('/cadastrarlivro', async (req, res) => {
     );
     console.log(rows);
     connection.release();
-    res.status(201).json({ message: 'livro cadastrado com sucesso!', livro: novoLivro });
+    res.status(201).json({ message: 'Livro cadastrado com sucesso!', livro: novoLivro });
   } catch (error) {
     console.error('Erro ao inserir livro:', error);
     res.status(500).json({ error: 'Erro ao inserir o livro no banco de dados' });
@@ -76,5 +66,3 @@ const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Servidor rodando: http://localhost:${PORT}/listarlivros`);
 });
-
-
