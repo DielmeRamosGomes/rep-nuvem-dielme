@@ -43,6 +43,6 @@ class Carro:
         print(f"Cor: {self.get_cor()}")
         print(f"Preço: {self.get_preco()}\n")
 
-palio = Carro("Fiat", "Palio", 2020, "Prata", 30000)
-palio.get_detalhes()
+#palio = Carro("Fiat", "Palio", 2020, "Prata", 30000)
+#palio.get_detalhes()
 
