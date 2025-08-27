@@ -5,5 +5,5 @@ class Livros {
         this.ano = ano;
     }
 }
-
+export default Livros;
 

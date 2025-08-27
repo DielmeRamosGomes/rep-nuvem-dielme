@@ -23,7 +23,7 @@ app.use(express.json());
 let lista_livros = [];
 
 async function usarConexao() {
-  const conexao = new Conexao('localhost', 3307, 'root', '', 'db_livros');
+  const conexao = new Conexao('localhost', 3307, 'root', '1234', 'db_livros');
   const pool = await conexao.conectar();
   const connection = await pool.getConnection();
   return connection;
@@ -32,7 +32,11 @@ async function usarConexao() {
 app.get('/listarlivros', (req, res) => {
   usarConexao()
     .then(connection => {
-      return connection.query('SELECT * FROM db_livros.livros');
+      return connection.query('select * from db_livros.mostrar_livros')
+        .then(result => {
+          connection.release();
+          return result;
+        });
     })
     .then(([rows]) => {
       res.json(rows);
@@ -56,7 +60,7 @@ app.post('/cadastrarlivro', async (req, res) => {
 
   try {
     const connection = await usarConexao();
-    const [rows] = await connection.query('INSERT INTO db_livros.livros(nome, editora, ano) VALUES (?, ?, ?);',
+    const [rows] = await connection.query('call db_livros.add_livro(?, ?, ?)',
       [nome, editora, ano]
     );
     console.log(rows);
@@ -70,7 +74,7 @@ app.post('/cadastrarlivro', async (req, res) => {
 
 const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor rodando: http://localhost:${PORT}/listarprodutos`);
+  console.log(`Servidor rodando: http://localhost:${PORT}/listarlivros`);
 });
 
 
