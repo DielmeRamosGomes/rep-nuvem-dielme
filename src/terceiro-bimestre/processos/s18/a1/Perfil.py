@@ -19,7 +19,7 @@ class Perfil():
     def set_curtidas(self): 
         self.__curtidas += 1
 
-perfil_douglas = Perfil("Douglas Silva", "@douglinha")
+perfil_douglas = Perfil(1, "Douglas Silva", "@douglinha", "douglas@exemplo.com", "senha123")
 
 for i in range(1, 11):
     perfil_douglas.set_curtidas()
