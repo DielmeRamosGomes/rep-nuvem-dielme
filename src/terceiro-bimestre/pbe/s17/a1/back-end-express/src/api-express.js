@@ -18,7 +18,7 @@ app.use(cors({
 app.use(express.json());
 
 async function usarConexao() {
-  const conexao = new Conexao('localhost', 3307, 'root', '1234', 'db_livros');
+  const conexao = new Conexao('localhost', 3306, 'root', '', 'db_livros');
   const pool = await conexao.conectar();
   const connection = await pool.getConnection();
   return connection;
