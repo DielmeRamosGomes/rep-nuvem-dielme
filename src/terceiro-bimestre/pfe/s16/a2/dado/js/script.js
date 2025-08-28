@@ -5,6 +5,7 @@ const cubo = document.querySelector('.cubo');
 const btnCubo = document.querySelector('#btn-cubo');
 const btnReset = document.querySelector('#btn-reset');
 const pTempo = document.querySelector('#paragrafo-tempo-ms');
+const btnDiminuir = document.querySelector('#btn-diminuir');
 let tempo_ms = 50;
 
 let intervalId;
@@ -31,6 +32,15 @@ btnReset.addEventListener('click', () => {
   tempo_ms = 50;
   startRotationInterval();
   pTempo.textContent = `${tempo_ms}ms`;
+  console.log(`tempo_ms: ${tempo_ms}`);
+});
+
+btnDiminuir.addEventListener('click', () => {
+  if (tempo_ms > 1) {
+    tempo_ms += 1;
+    pTempo.textContent = `${tempo_ms}ms`;
+    startRotationInterval();
+  }
   console.log(`tempo_ms: ${tempo_ms}`);
 });
 

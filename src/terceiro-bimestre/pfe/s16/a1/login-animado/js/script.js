@@ -35,7 +35,14 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 });
 
+const btnTeste = document.querySelector("#btn-teste");
+btnTeste.addEventListener("onmouseover", () => {
+btnTeste.style.padding = "20px";
+});
 
+btnTeste.addEventListener("onmouseout", () => {
+btnTeste.style.padding = "10px";
+});
 
 
 
