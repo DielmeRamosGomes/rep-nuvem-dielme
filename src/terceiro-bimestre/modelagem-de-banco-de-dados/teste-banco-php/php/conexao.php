@@ -4,7 +4,7 @@
 	} 
 	$hostname = "localhost";
 	$user = "root";
-	$password = "";
+	$password = "1234";
 	$database = "db_product";
     $port = "3307";
 

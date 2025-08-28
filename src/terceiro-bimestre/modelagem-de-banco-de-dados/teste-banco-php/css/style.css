@@ -18,13 +18,20 @@ label {
 .form-product {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: end;
+    background-color: rgba(58, 70, 182, 0.815);
+    border-radius: 10px;
+    padding: 40px 20px;
+    box-shadow: rgba(58, 70, 182, 0.815);
 }
 
 .group-input {
+    display: flex;
     gap: 5px;
     align-items: center;
     margin-bottom: 1rem;
+    color: black;
 }
 
 .h1-title {
@@ -36,12 +43,27 @@ label {
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
     padding: 10px 20px;
-    background-color: white;
+    background-color: black;
     border-radius: 8px;
+    border: none;
+    color: white;
 }
 
 .btn-register:hover {
-    transition: all 0.3s ease-in-out;
-    background-color: rgb(11, 11, 225);
+    transition: all 0.5s ease;
+    background-color: rgba(11, 7, 224, 0.904);
     color: white;
 }
+
+#input-name {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#input-price {
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+}
+
