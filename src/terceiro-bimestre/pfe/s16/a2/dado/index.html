@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cubo 3D</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h1 id="h1-title">Cubo 3D</h1>
-      <div class="cubo">
-        <div class="face frente">1</div>
-        <div class="face tras">2</div>
-        <div class="face direita">3</div>
-        <div class="face esquerda">4</div>
-        <div class="face topo">5</div>
-        <div class="face base">6</div>
-      </div>
-      <button id="btn-cubo" type="submit">Aumentar velocidade</button>
-    </div>
 
-    <script src="./js/script.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cubo 3D</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1 id="h1-title">Cubo 3D</h1>
+    <div class="cubo">
+      <div class="face frente">1</div>
+      <div class="face tras">2</div>
+      <div class="face direita">3</div>
+      <div class="face esquerda">4</div>
+      <div class="face topo">5</div>
+      <div class="face base">6</div>
+    </div>
+    <div class="grupo-botoes">
+      <button class="botao" id="btn-cubo" type="submit">Aumentar velocidade</button>
+      <button class="botao" id="btn-reset" type="submit">resetar velocidade</button>
+    </div>
+    <p id="paragrafo-tempo-ms">50ms</p>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+
 </html>

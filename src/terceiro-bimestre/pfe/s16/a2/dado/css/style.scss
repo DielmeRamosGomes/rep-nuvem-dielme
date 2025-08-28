@@ -1,3 +1,5 @@
+$azul-legal: rgba(0, 128, 255, 0.8);
+
 body {
   display: flex;
   justify-content: center;
@@ -19,7 +21,7 @@ body {
   text-align: center;
   margin-bottom: 10px;
   font-family: inherit;
-  color: rgba(0, 128, 255, 0.8);
+  color: $azul-legal;
 }
 
 .cubo {
@@ -38,7 +40,7 @@ body {
   position: absolute;
   width: 200px;
   height: 200px;
-  background: rgba(0, 128, 255, 0.8);
+  background: $azul-legal;
   border: 2px solid #fff;
   display: flex;
   align-items: center;
@@ -85,7 +87,7 @@ body {
 }
 
 .botao:hover {
-  background-color: rgba(0, 128, 255, 0.8);
+  background-color: $azul-legal;
   color: white;
 }
 
@@ -100,5 +102,5 @@ body {
   font-size: 30px;
   text-align: center;
   margin-top: 20px;
-  color: rgba(0, 128, 255, 0.8);
-}/*# sourceMappingURL=style.css.map */
+  color: $azul-legal;
+}

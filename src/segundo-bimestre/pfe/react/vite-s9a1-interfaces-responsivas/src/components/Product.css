@@ -1,0 +1,15 @@
+.card {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  /* Aplica o mixin de sombra */
+}
+.card .card-title {
+  color: var(--primary-color);
+  font-size: var(--font-size-large);
+}
+.card .card-description {
+  font-size: var(--font-size-base);
+  color: #333;
+}/*# sourceMappingURL=Product.css.map */
