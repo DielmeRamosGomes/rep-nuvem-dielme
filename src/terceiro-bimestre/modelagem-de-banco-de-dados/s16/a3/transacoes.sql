@@ -1,6 +1,6 @@
 create database if not exists db_fast_tech;
 
-CREATE TABLE
+CREATE TABLE if not exists
     db_fast_tech.pedidos (
         id INT AUTO_INCREMENT PRIMARY KEY,
         cliente VARCHAR(100),
