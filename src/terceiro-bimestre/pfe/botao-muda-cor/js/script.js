@@ -8,6 +8,14 @@ buttonCor.addEventListener('click', () => {
     pNewColor.textContent = `Cor: ${novaCor}`;
 });
 
+buttonCor.addEventListener('mouseover', () => {
+    buttonCor.style.padding = '20px';
+});
+
+buttonCor.addEventListener('mouseout', () => {
+    buttonCor.style.padding = '10px';
+});
+
 function geraCorAleatoria() {
     let cor = '#';
     let letras = '0123456789ABCDEF';
