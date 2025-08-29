@@ -1,0 +1,22 @@
+pip install django djangorestframework
+
+django-admin startproject apidjango
+
+python manage.py startapp myapp
+
+Abra o arquivo apidjango/settings.py e adicione o myapp e o 
+rest_framework à lista de INSTALLED_APPS.
+
+Abra o arquivo myapp/models.py e adicione o código
+
+migrações para criar a tabela no banco de dados.
+python manage.py makemigrations
+python manage.py migrate
+
+Crie um novo arquivo chamado myapp/serializers.py e adicione o seguinte código:
+
+Abra o arquivo myapp/views.py e adicione o seguinte código
+
+No myapp/urls.py adicione o codigo
+
+python manage.py runserver
