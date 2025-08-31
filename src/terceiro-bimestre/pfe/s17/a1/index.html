@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Climática</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="h1-title">Consultar Clima</h1>
+        <form id="form-tags">
+            <input type="text" name="city" id="city" placeholder="Digite o nome da cidade">
+            <select id="method">
+                <option value="fetch">Fetch</option>
+                <option value="axios">Axios</option>
+            </select>
+            <button id="btn-consultar" onclick="getWeather()">Consultar</button>
+        </form>
+        <div id="result"></div>
+        <div id="error"></div>
+
+        <!-- Inclua o Axios via CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="./js/app.js"></script>
+    </div>
+</body>
+
+</html>
