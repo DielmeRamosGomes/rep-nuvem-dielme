@@ -35,10 +35,10 @@ async function axiosWeather(city) {
 function displayWeather(data) {
     const resultDiv = document.querySelector('#result');
     resultDiv.innerHTML =
-        `<h2>Clima em ${data.name}</h2>
-        <p>Temperatura: ${data.main.temp}°C</p>
-        <p>Umidade: ${data.main.humidity}%</p>
-        <p>Descrição: ${data.weather[0].description}</p>`;
+        `<h2 style="color: black;">Clima em: ${data.name}</h2>
+        <p style="color: black;">Temperatura: ${data.main.temp}°C</p>
+        <p style="color: black;">Umidade: ${data.main.humidity}%</p>
+        <p style="color: black;">Descrição: ${data.weather[0].description}</p>`;
     document.querySelector('#error').innerHTML = '';  // Limpa mensagens de erro
 }
 
