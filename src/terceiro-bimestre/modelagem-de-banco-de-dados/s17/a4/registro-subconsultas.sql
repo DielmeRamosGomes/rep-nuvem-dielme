@@ -63,6 +63,15 @@ create view if not exists db_ecommerce.clientes_acima_da_media as
 select * from db_ecommerce.clientes_acima_da_media;
 
 /*3. Subconsulta em FROM – Relatório com total de compras por cliente acima da média geral*/
+create view if not exists db_ecommerce.relatorio_compras_acima_da_media as
+    select tc.cliente, tc.total_compras from
+        (select c.nome as cliente, (select sum(valor_total)
+            from db_ecommerce.compras co 
+                where co.id_cliente = c.id) as total_compras
+                    from db_ecommerce.clientes c
+                        group by cliente) as tc
+                            where tc.total_compras > (select avg(valor_total)
+                                from db_ecommerce.compras);
 
-
+select * from db_ecommerce.relatorio_compras_acima_da_media;
 
