@@ -1,0 +1,79 @@
+1. Objetivo
+Garantir a confidencialidade, integridade e disponibilidade das
+informações da livraria online, protegendo os dados dos
+clientes, fornecedores, colaboradores e da própria empresa
+contra ameaças internas e externas.
+
+2. Escopo
+Esta política aplica-se a todos os colaboradores, parceiros, 
+fornecedores e sistemas que fazem parte da operação da livraria
+online.
+
+3. Diretrizes para Implementação e Manutenção
+3.1 Gestão de Acessos
+
+Controle rigoroso de acesso aos sistemas e dados sensíveis, 
+garantindo que cada usuário tenha acesso somente às informações
+necessárias para sua função.
+Utilização de autenticação forte (exemplo: senha forte, 
+autenticação de dois fatores).
+Revisão periódica dos acessos concedidos para evitar 
+privilégios desnecessários.
+
+3.2 Proteção de Dados dos Clientes
+
+Criptografia dos dados sensíveis armazenados, como dados 
+pessoais e informações de pagamento.
+Utilização de conexões seguras (HTTPS) em todas as transações 
+realizadas na plataforma.
+Política de privacidade clara e transparente, com consentimento
+para coleta e uso de dados.
+
+3.3 Segurança dos Sistemas
+
+Atualização contínua dos sistemas, aplicativos e servidores 
+para corrigir vulnerabilidades.
+Monitoramento constante do ambiente para identificar possíveis
+tentativas de ataque ou comportamento suspeito.
+Backup regular dos dados críticos, com armazenamento seguro e 
+testes periódicos de restauração.
+
+3.4 Treinamento e Conscientização
+
+Capacitação regular dos colaboradores sobre boas práticas de 
+segurança da informação, phishing, engenharia social e uso 
+correto das ferramentas.
+Comunicação clara sobre as responsabilidades de cada um para 
+manter a segurança da informação.
+
+3.5 Gestão de Incidentes
+
+Definição de procedimentos para identificação, registro, 
+resposta e análise de incidentes de segurança.
+Comunicação imediata aos responsáveis e, quando necessário, 
+aos clientes em caso de vazamento ou comprometimento de dados.
+
+3.6 Avaliação e Melhoria Contínua
+
+Realização periódica de auditorias internas e externas para
+verificar o cumprimento da política.
+Revisão e atualização da política, procedimentos e controles, 
+baseando-se em novos riscos, tecnologias e legislações.
+
+4. Responsabilidades
+
+Equipe de TI: Implementar e manter os controles técnicos.
+Gestores: Garantir que suas equipes sigam a política.
+Colaboradores: Seguir as diretrizes e reportar qualquer 
+incidente ou dúvida.
+Diretoria: Aprovar a política e alocar recursos para sua 
+execução.
+
+5. Penalidades
+
+O descumprimento desta política poderá resultar em 
+advertências, suspensão ou até desligamento, conforme a 
+gravidade do caso.
+
+
+
