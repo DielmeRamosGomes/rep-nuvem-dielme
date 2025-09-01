@@ -1,6 +1,6 @@
 
 async function fetchWeather(city) {
-    const apiKey = '9fa13f1e1e9678135d65dc70ac6e7a69';
+    const apiKey = '1287fcf0441facb10d80f0e98a09a1e5';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`;
 
     try {
@@ -10,6 +10,7 @@ async function fetchWeather(city) {
             throw new Error('Cidade não encontrada ou erro na API');
         }
         const data = await response.json();
+        console.log("nome da cidade: " + data.name);
         displayWeather(data);
     } catch (error) {
         displayError(error.message);
@@ -63,6 +64,16 @@ function getWeather() {
         axiosWeather(city);
     }
 }
+
+const btnConsultar = document.querySelector('#btn-consultar');
+
+btnConsultar.addEventListener('click', () => {
+    getWeather();
+});
+
+
+
+
 
 /*
 1. Qual é a diferença entre fetch e axios para realizar 
