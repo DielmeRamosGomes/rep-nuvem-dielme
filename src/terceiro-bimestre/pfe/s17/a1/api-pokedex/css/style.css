@@ -49,3 +49,63 @@ body {
     color: white;
     transition: all 0.5s ease;
 }
+
+#form-resposta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#id-resposta {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 10px 10px;
+    border: 1px solid red;
+    border-radius: 8px;
+    margin: 0;
+}
+
+#nome-resposta {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 10px 10px;
+    border: 1px solid red;
+    border-radius: 8px;
+    margin: 0;
+}
+
+#altura-resposta {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 10px 10px;
+    border: 1px solid red;
+    border-radius: 8px;
+    margin: 0;
+}
+
+#peso-resposta {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    padding: 10px 10px;
+    border: 1px solid red;
+    border-radius: 8px;
+    margin: 0;
+}
+
+#img-resposta {
+    height: 200px;
+    width: 200px;
+    border: 1px solid red;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+

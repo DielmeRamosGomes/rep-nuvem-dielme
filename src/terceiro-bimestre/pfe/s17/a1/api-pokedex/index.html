@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokédex</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <div class="container">
         <h1 id="h1-title">Pokédex</h1>
@@ -13,8 +15,17 @@
             <input type="text" name="pokemon" id="nome-pokemon" placeholder="Digite o nome do Pokémon" required>
             <button id="btn-pokemon" type="submit">Buscar Pokémon</button>
         </form>
+        <form id="form-resposta">
+            <p id="id-resposta">ID: </p>
+            <p id="nome-resposta">Nome: </p>
+            <p id="altura-resposta">Altura: </p>
+            <p id="peso-resposta">Peso: </p>
+            <img id="img-resposta" alt="Imagem do Pokémon">
+        </form>
+
     </div>
-    
+
     <script src="./js/script.js"></script>
 </body>
+
 </html>
