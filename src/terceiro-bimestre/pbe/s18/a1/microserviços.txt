@@ -1,0 +1,55 @@
+1. Quais são as principais vantagens da arquitetura de 
+microsserviços em comparação com uma aplicação monolítica?
+
+A principal vantagem da arquitetura de microsserviços é a 
+modularidade. Isso permite que as equipes trabalhem de forma
+independente em serviços menores, facilitando o 
+desenvolvimento e a implantação contínuos (CI/CD) e a 
+escalabilidade de partes específicas da aplicação, em vez 
+de escalar o sistema inteiro. Uma aplicação monolítica, 
+por outro lado, é um único e grande bloco que se torna 
+difícil de gerenciar, atualizar e escalar à medida que 
+cresce.
+
+2. Por que é importante escolher o modo de comunicação adequado
+(síncrono ou assíncrono) entre microsserviços?
+
+A escolha do modo de comunicação é crucial para garantir que 
+arquitetura de microsserviços seja eficiente, escalável e 
+resiliente.
+Comunicação Síncrona (ex: REST API) é ideal para operações 
+que exigem uma resposta imediata, mas cria um acoplamento 
+temporal. Se um serviço falhar, ele pode causar a falha em 
+cascata em outros que dependem dele.
+
+Comunicação Assíncrona (ex: filas de mensagens) desacopla os 
+serviços, aumentando a resiliência. Se um serviço estiver 
+indisponível, a mensagem é enfileirada e processada quando 
+ele voltar, evitando falhas em cascata e permitindo que o 
+sistema lide melhor com picos de carga.
+
+3. Como vocês lidariam com a possibilidade de falha na 
+comunicação entre os microsserviços?
+
+Para lidar com falhas na comunicação entre microsserviços, a 
+abordagem é aplicar estratégias de resiliência e tolerância 
+a falhas. As principais são:
+
+Retentativas com Backoff Exponencial: Tentar novamente uma 
+operação que falhou, mas com um tempo de espera crescente.
+
+Disjuntores (Circuit Breaker): "Abrir o circuito" para 
+evitar chamadas a um serviço que está falhando, protegendo o 
+sistema de um colapso.
+
+Timeouts: Limitar o tempo de espera por uma resposta, 
+evitando que requisições fiquem penduradas indefinidamente.
+
+Comunicação Assíncrona: Usar filas de mensagens para 
+desacoplar serviços, garantindo que as operações sejam 
+processadas mesmo se o serviço de destino estiver 
+indisponível temporariamente.
+
+Fallbacks: Oferecer uma alternativa em caso de falha, para 
+manter a experiência do usuário.
+
