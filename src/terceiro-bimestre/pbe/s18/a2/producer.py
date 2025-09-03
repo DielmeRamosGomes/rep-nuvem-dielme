@@ -13,7 +13,7 @@ channel.queue_declare(queue='hello')
 # Publica a mensagem na fila 'hello'
 channel.basic_publish(exchange='',
                       routing_key='hello',
-                      body='Olá, RabbitMQ!')
+                      body='Olá, RabbitMQ! msg passado pelo producer.py')
 
 print(" [x] Mensagem enviada: 'Olá, RabbitMQ!'")
 
