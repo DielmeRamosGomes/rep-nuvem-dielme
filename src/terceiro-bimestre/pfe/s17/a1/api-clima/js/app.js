@@ -1,6 +1,6 @@
 
 async function fetchWeather(city) {
-    const apiKey = '1287fcf0441facb10d80f0e98a09a1e5';
+    const apiKey = '9fa13f1e1e9678135d65dc70ac6e7a69';
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=pt_br`;
 
     try {
@@ -67,9 +67,7 @@ function getWeather() {
 
 const btnConsultar = document.querySelector('#btn-consultar');
 
-btnConsultar.addEventListener('click', () => {
-    getWeather();
-});
+btnConsultar.addEventListener('click', getWeather);
 
 
 

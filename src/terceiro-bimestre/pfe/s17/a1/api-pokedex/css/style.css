@@ -58,10 +58,14 @@ body {
     padding: 20px 20px;
     gap: 10px;
     margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+    width: 480px;
+    box-shadow: white 0px 0px 10px;
 }
 
 #id-resposta {
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin-top: 20px;
@@ -72,7 +76,7 @@ body {
 }
 
 #nome-resposta {
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     padding: 10px 10px;
@@ -82,7 +86,7 @@ body {
 }
 
 #altura-resposta {
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     padding: 10px 10px;
@@ -92,7 +96,7 @@ body {
 }
 
 #peso-resposta {
-    color: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
     padding: 10px 10px;

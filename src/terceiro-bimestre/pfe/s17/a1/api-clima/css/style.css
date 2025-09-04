@@ -64,7 +64,7 @@ input[type="text"]:hover {
 }
 
 #result {
-    height: 100px;
+    height: 300px;
     width: 540px;
     display: flex;
     flex-direction: column;
