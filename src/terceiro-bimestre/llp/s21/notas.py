@@ -13,5 +13,13 @@ print(f"Notas[2] = {notas[2]}")
 # lista_mista = ['a', 2.3, True, 'Python']
 # print(f"Lista mista: {lista_mista}")
 
+# acessar um indice fora do limite resulta em IndexError 
+# print(f"Notas[5] = {notas[5]}")
+
+# inserindo um elemento novo na lista
+# notas.insert(0, 45)
+# notas.append(100)
+# print(f"Notas: {notas}")
+
 
 
