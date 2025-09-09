@@ -1,3 +1,9 @@
+/*
+npm install axios
+npm install --save-dev jest
+npm test para executar o test
+*/
+
 function calcularTotalPedido(produtos) {
   return produtos.reduce((total, produto) => total + produto.preco, 0);
 }
