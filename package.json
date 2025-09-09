@@ -7,9 +7,10 @@
     "mongodb": "^6.16.0",
     "mongoose": "^8.15.0",
     "mysql2": "^3.14.4",
-    "requests": "^0.3.0"
+    "requests": "^0.3.0",
+    "ws": "^8.18.3"
   },
-  "type": "module",
+  "type": "commonjs",
   "devDependencies": {
     "cssnano": "^7.1.0",
     "jest": "^29.7.0",

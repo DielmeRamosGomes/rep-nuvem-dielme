@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#h1-title {
+    font-family: inherit;
+    font-size: 40px;
+}
+
+.elementos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: white;
+    padding: 20px 20px ;
+    border-radius: 8px;
+}
+
+#input-frase {
+    font-size: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#btn-enviar {
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: white;
+    cursor: pointer;
+}
+
+#btn-enviar:hover{
+    transition: all 0.4s ease-in-out;
+    background-color: rgb(122, 26, 179);
+}
+
+#paragrafo-frase {
+    font-family: inherit;
+    font-size: 20px;
+    padding: 5px 5px;
+    color: black;
+    border-radius: 8px;
+}
+
