@@ -1,5 +1,7 @@
 from ContaBancaria import ContaBancaria
 from ContaCorrente import ContaCorrente
+from ContaInvestimento import ContaInvestimento
+
 
 if __name__=="__main__":
     conta1 = ContaBancaria("0002", 200)
