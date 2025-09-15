@@ -39,5 +39,7 @@
             "database": "db_loja_ecommerce",
             "username": "root"
         }
-    ]
+    ],
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python-envs.pythonProjects": []
 }
