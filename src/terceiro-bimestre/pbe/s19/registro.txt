@@ -1,0 +1,33 @@
+Por que o princípio do menor privilégio é importante?
+
+R.: O princípio do menor privilégio é fundamental na segurança da informação
+porque limita o dano potencial que um usuário, sistema ou aplicativo pode 
+causar. Em sua essência, ele determina que cada entidade — seja um usuário 
+humano, um programa ou um processo — deve ter apenas as permissões 
+necessárias para executar suas funções. Nada mais.
+
+Como a criptografia protege os dados em trânsito e em repouso?
+
+R.: A criptografia protege os dados ao transformar a informação original em 
+um formato ilegível, garantindo que apenas as pessoas com a chave correta 
+possam acessá-la. Essa proteção acontece em dois momentos principais: quando
+os dados estão em movimento (em trânsito) e quando estão armazenados 
+(em repouso).
+
+Como implementar um sistema de auditoria eficiente?
+
+R.: Um bom sistema de auditoria deve ser capaz de responder a perguntas 
+como: "Quem fez o quê, quando, onde e por quê?".
+1. Defina o que auditar: Acessos a dados sensíveis, Alterações de 
+privilégios
+2. Escolha as ferramentas certas: Use ferramentas que se adequem ao seu 
+ambiente e que ofereçam recursos de análise.
+3. Implemente um processo de revisão e resposta
+
+
+
+
+
+
+
+

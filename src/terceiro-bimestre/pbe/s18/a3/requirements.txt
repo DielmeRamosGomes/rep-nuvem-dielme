@@ -1,0 +1,1 @@
+# https://python.floripa.br/celery-processamento-assincrono-e-escalavel-em-aplicacoes-python
