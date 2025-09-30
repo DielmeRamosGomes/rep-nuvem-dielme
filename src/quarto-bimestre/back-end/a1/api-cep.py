@@ -3,7 +3,7 @@ import json
 
 def buscar_cep(cep):
     CHAVE_API = 'b2e1f39d5787d64b71d7ce3b3782275143206b3fa7d392b7ab54022c4302d1db'
-    URL = 'https://cep.awesomeapi.com.br/json/'+f'{cep}'+'?token='+f'{CHAVE_API}'
+    URL = f'https://cep.awesomeapi.com.br/json/{cep}?token={CHAVE_API}'
 
     resposta = requests.get(URL)
     if resposta.status_code == 200:

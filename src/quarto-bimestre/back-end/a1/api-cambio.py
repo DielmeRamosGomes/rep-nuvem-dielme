@@ -4,7 +4,7 @@ import requests
 import json
 
 CHAVE_API = 'b2e1f39d5787d64b71d7ce3b3782275143206b3fa7d392b7ab54022c4302d1db'
-URL = 'https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL?token='+f'{CHAVE_API}'
+URL = f'https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL?token={CHAVE_API}'
 
 resposta = requests.get(URL)
 
