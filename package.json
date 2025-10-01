@@ -10,7 +10,7 @@
     "requests": "^0.3.0",
     "ws": "^8.18.3"
   },
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "cssnano": "^7.1.0",
     "jest": "^29.7.0",
