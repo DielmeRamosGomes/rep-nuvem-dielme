@@ -1,0 +1,50 @@
+use("db_test");
+
+db.Clientes.insertOne({
+    "cliente_id": 1,
+    "nome": "Maria Silva",
+    "email": "maria@example.com",
+    "telefone": "123456789",
+    "pedidos": [1, 2] // IDs dos pedidos relacionados ao cliente
+});
+
+db.Produtos.insertMany([
+    {
+        "produto_id": 101,
+        "nome": "Notebook",
+        "preco": 3500.00,
+        "categoria": "Eletrônicos"
+    },
+    {
+        "produto_id": 102,
+        "nome": "Smartphone",
+        "preco": 1500.00,
+        "categoria": "Eletrônicos"
+    },
+    {
+        "produto_id": 103,
+        "nome": "Fone de Ouvido",
+        "preco": 300.00,
+        "categoria": "Acessórios"
+    }
+]);
+
+db.Pedidos.insertOne({
+    "pedido_id": 1,
+    "data": new Date("2024-11-15"),
+    "cliente_id": 1,
+    "status": "Processando",
+    "itens": [
+        {
+            "produto_id": 101,
+            "quantidade": 2,
+            "preco_unitario": 3500.00
+        },
+        {
+            "produto_id": 102,
+            "quantidade": 1,
+            "preco_unitario": 1500.00
+        }
+    ]
+});
+
