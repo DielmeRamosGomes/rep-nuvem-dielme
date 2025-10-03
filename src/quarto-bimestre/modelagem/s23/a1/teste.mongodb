@@ -1,0 +1,11 @@
+/*
+use('db_test');
+
+db.Clientes.insertOne({
+    "id": 1,
+    "nome": "Dielme Ramos",
+    "email": "dielme@exemplo.com",
+    "senha": "senha123"
+});
+*/
+
