@@ -7,9 +7,9 @@ matriz = [
 matriz2 = [['X' for _ in range(3)] for _ in range(3)]
 
 def exibir_matriz(matriz):
-    print("  1 2 3")
+    print("  0 1 2")
     for linha in range(3):
-        print(linha + 1, end=' ')        
+        print(linha, end=' ')        
         for coluna in range(3):
             print(matriz[linha][coluna], end=' ')
         print()
