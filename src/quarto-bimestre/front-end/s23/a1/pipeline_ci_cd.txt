@@ -1,0 +1,47 @@
+
+O Pipeline de CI/CD (Integração Contínua e Entrega Contínua/
+Implantação Contínua) é um fluxo de trabalho automatizado que 
+permite às equipes de desenvolvimento de software construir, 
+testar e implantar (fazer o deploy) novas versões de aplicações 
+de forma rápida, confiável e consistente.
+
+É a espinha dorsal da cultura DevOps, pois automatiza a jornada 
+do código desde a escrita inicial pelo desenvolvedor até que 
+ele esteja disponível para os usuários finais.
+
+O que é o Pipeline de CI/CD?
+Pense em um pipeline como uma linha de montagem automatizada 
+para seu software. Cada etapa é um processo automático que 
+garante que o código atenda a certos padrões antes de avançar 
+para a próxima fase. O processo é acionado por uma mudança no 
+código (como um commit em um repositório Git).
+
+A sigla CI/CD representa duas práticas essenciais:
+
+CI (Integração Contínua - Continuous Integration): É a prática 
+de integrar as alterações de código dos desenvolvedores a um 
+repositório compartilhado frequentemente (várias vezes ao dia). 
+A cada integração, processos automatizados são acionados para:
+
+Build (Compilação): Compilar o código-fonte em um artefato 
+executável (como um arquivo JAR, uma imagem Docker, etc.).
+
+Teste Automatizado: Executar testes unitários, de integração e 
+outros para identificar erros precocemente.
+
+CD (Entrega Contínua ou Implantação Contínua - Continuous 
+Delivery/Deployment): A prática que estende a automação para 
+além do teste, preparando o software para o lançamento.
+
+Entrega Contínua (Continuous Delivery): O software testado e 
+pronto para uso é automaticamente enviado para um repositório 
+de artefatos. A implantação final em produção é feita com um 
+passo manual (um clique em um botão), dando mais controle à 
+equipe.
+
+Implantação Contínua (Continuous Deployment): Leva a automação 
+um passo adiante. Se o software passar por todos os testes 
+automatizados, ele é automaticamente implantado no ambiente de 
+produção, sem a necessidade de intervenção humana.
+
+
