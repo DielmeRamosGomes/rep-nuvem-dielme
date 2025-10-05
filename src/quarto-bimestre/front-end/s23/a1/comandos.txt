@@ -1,0 +1,14 @@
+# Exemplo de configuração de um repositório local para um
+repositório no GitHub.
+ATENÇÃO: lembre-se que o nome de usuário e o email são da sua 
+CONTA e a URL é do SEU repositório.
+
+git init
+git config --global user.name "DielmeRamosGomes"
+git config --global user.email "dielme.ramos@unesp.br"
+git branch -M main
+git remote add origin https://github.com/DielmeRamosGomes/pipeline_ci_cd.git
+git pull origin main
+
+
+

@@ -44,4 +44,25 @@ um passo adiante. Se o software passar por todos os testes
 automatizados, ele é automaticamente implantado no ambiente de 
 produção, sem a necessidade de intervenção humana.
 
+As Principais Etapas do Pipeline
+Embora a estrutura possa variar, um pipeline de CI/CD 
+tipicamente inclui as seguintes fases:
+
+1 - Source (Fonte): O desenvolvedor faz um commit do código no 
+sistema de controle de versão (como Git/GitHub/GitLab). Isso 
+aciona o pipeline.
+
+2 - Build (Compilação): O código é compilado, e os binários da 
+aplicação são criados.
+
+3 - Test (Teste): É a fase de Integração Contínua (CI). Os 
+testes automatizados (unitários, de integração, de segurança, 
+etc.) são executados para garantir que a nova alteração não 
+quebrou nenhuma funcionalidade existente.
+
+4 - Deploy (Implantação): É a fase de Entrega/Implantação 
+Contínua (CD). Se todos os testes passarem, o artefato é 
+implantado em um ou mais ambientes (como desenvolvimento, 
+homologação/staging e, finalmente, produção).
+
 
