@@ -1,0 +1,62 @@
+1) Qual tipo de banco de dados NoSQL (documento, chave-valor, 
+coluna ou gráfico) seria o mais apropriado para armazenar dados 
+de uma rede social? Justifiquem a escolha com base na estrutura 
+de dados, consultas e escalabilidade.
+
+R.: O tipo de banco de dados mais adequado seria o de Documento 
+(Document Database).
+Flexibilidade para Dados Não Estruturados: A plataforma lida com 
+mensagens, comentários, curtidas e compartilhamentos. Esses dados
+são inerentemente heterogêneos e podem ter estruturas em 
+constante evolução. Bancos de dados de Documento (como o MongoDB)
+armazenam dados em formatos flexíveis como JSON ou BSON, o que 
+se encaixa perfeitamente na natureza dos dados não estruturados
+de uma rede social.
+
+2) Expliquem o conceito de arquitetura distribuída em bancos 
+NoSQL e por que ela é essencial para o crescimento da DataConnect.
+
+R.: A Arquitetura Distribuída refere-se à prática de dividir o 
+sistema de banco de dados e a sua carga de trabalho por múltiplos
+servidores de hardware, frequentemente chamados de nós (nodes) ou
+clusters.
+Em contraste com os bancos de dados relacionais tradicionais, que
+historicamente dependiam da Escalabilidade Vertical (colocar 
+mais recursos, como CPU e RAM, em um único servidor caro), os 
+bancos NoSQL abraçam a Escalabilidade Horizontal.
+
+3) A replicação é uma técnica essencial para bancos de dados 
+distribuídos. Expliquem como ela funciona e por que é importante
+para garantir a disponibilidade dos dados da DataConnect.
+
+R.: A distribuição é alcançada por meio de duas técnicas principais:
+Sharding (Fragmentação):
+É o método de particionamento de dados. O conjunto total
+de dados da DataConnect (milhões de posts, comentários, etc.) é 
+dividido em fatias menores e mais gerenciáveis, e cada fatia é 
+armazenada em um servidor separado, chamado shard.
+Como funciona: Quando um usuário faz uma busca, o sistema 
+encaminha a solicitação apenas para o shard que contém aqueles 
+dados específicos, acelerando drasticamente a consulta.
+
+Replicação (Replication):
+O que é: É a técnica de manter cópias idênticas dos dados (ou de 
+cada shard) em vários servidores diferentes.
+
+Como funciona: Um servidor atua como o principal (Primary), 
+lidando com todas as escritas, enquanto os outros (Secondaries) 
+mantêm cópias e podem ser usados para solicitações de leitura, 
+garantindo redundância.
+
+4) A escalabilidade horizontal é uma vantagem importante dos 
+bancos NoSQL. Descrevam o que significa escalar horizontalmente e
+como essa técnica beneficia o crescimento contínuo da DataConnect.
+
+R.: Escalabilidade Horizontal é a estratégia de aumentar a 
+capacidade de um sistema de banco de dados adicionando mais 
+servidores (chamados nós ou instances) a um cluster existente. É 
+o oposto da escalabilidade vertical (Scale-Up), que consiste em 
+aumentar a capacidade de um único servidor (adicionando mais CPU,
+ RAM ou disco).
+
+
