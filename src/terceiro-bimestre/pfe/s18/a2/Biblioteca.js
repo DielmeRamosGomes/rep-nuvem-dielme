@@ -23,9 +23,7 @@ class Biblioteca {
 
   mostrar_catalogo_usuarios() {
     this.__usuarios.forEach((usuario) => {
-      console.log(`Id: ${usuario.getId()}`);
-      console.log(`Nome: ${usuario.getNome()}`);
-      console.log(`Email: ${usuario.getEmail()}`);
+      usuario.getInformacoes();
       console.log("--------------------------------------");
     });
   }

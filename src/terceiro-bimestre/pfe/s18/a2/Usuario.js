@@ -22,6 +22,13 @@ class Usuario {
         return this.__senha;
     }
 
+    getInformacoes() {
+        console.log(`Id: ${this.__id}`);
+        console.log(`Nome: ${this.__nome}`);
+        console.log(`Email: ${this.__email}`);
+        //console.log(`Senha: ${this.__senha}`);
+    }
+
 }
 export default Usuario;
 
