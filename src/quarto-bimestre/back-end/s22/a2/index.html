@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Exibindo uma lista de Repositórios públicos do GitHub com SDK Octokit</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="titulo">Repositórios do Usuário: </h1>
+        <input type="text" id="nome-usuario" placeholder="Digite o nome de usuário do GitHub">
+        <button id="btn-buscar">Buscar Repositórios</button>
+        <ul id="repo-list"></ul>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@octokit/core@5.1.0/dist-web/index.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
