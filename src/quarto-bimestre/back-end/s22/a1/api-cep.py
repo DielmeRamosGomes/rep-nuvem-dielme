@@ -9,12 +9,12 @@ def buscar_cep(cep):
     if resposta.status_code == 200:
         try:
             dados = resposta.json()
-            print("CEP obtido com sucesso!")
-            #print(json.dumps(dados, indent=4))
-            print(f"Nome da Rua: {dados['address_name']}")
-            print(f"Distrito: {dados['district']}")
-            print(f"Cidade: {dados['city']}")
-            print(f"Estado: {dados['state']}")
+            #print("CEP obtido com sucesso!")
+            print(json.dumps(dados, indent=4))
+            #print(f"Nome da Rua: {dados['address_name']}")
+            #print(f"Distrito: {dados['district']}")
+            #print(f"Cidade: {dados['city']}")
+            #print(f"Estado: {dados['state']}")
         except requests.exceptions.JSONDecodeError:
             print("Erro: A resposta não está em um formato JSON válido.")
             print("Conteúdo da resposta:", resposta.text)
@@ -27,4 +27,5 @@ while True:
     if cep.lower() == 'sair':
         break
     buscar_cep(cep)
-    
+
+#buscar_cep('03694060')   

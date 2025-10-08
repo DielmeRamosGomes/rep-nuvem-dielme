@@ -16,6 +16,9 @@ if resposta.status_code == 200:
         # Uso do json.dumps para imprimir o resultado de forma formatada e legível.
         #print(json.dumps(cotacoes, indent=4))
         print(f"1 Dólar = R$ {cotacoes['USDBRL']['high']}")
+        print(f"Horario da cotação: {cotacoes['USDBRL']['create_date']}")
+        print(f"1 Euro = R$ {cotacoes['EURBRL']['high']}")
+        print(f"Horario da cotação: {cotacoes['EURBRL']['create_date']}")
     except requests.exceptions.JSONDecodeError:
         print("Erro: A resposta não está em um formato JSON válido.")
         print("Conteúdo da resposta:", resposta.text)
