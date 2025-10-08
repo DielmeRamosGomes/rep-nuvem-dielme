@@ -2,24 +2,19 @@ const nomeUsuario = document.querySelector('#nome-usuario');
 const titulo = document.querySelector('#titulo');
 const btnBuscar = document.querySelector('#btn-buscar');
 
-// Acessando a variável global do CDN
-const { Octokit } = window; 
+// Acessando a variável global do CDN 
 const octokit = new Octokit(); 
 
-
-async function fetchUserRepos() {
+async function fetchUserRepos(nomeUsuarioString) {
     const listElement = document.getElementById('repo-list');
     listElement.innerHTML = '<li>Carregando repositórios...</li>';
     try {
         // 2. Chama um método específico do SDK para a API
         // O SDK lida com a URL completa, headers e parsing do JSON
-        const response = await octokit.request('GET /users/{username}/repos', {
-            username: nomeUsuario.value,
+        const response = await octokit.rest.repos.listForUser({
+            username: nomeUsuarioString,
             sort: 'updated',
-            per_page: 5,
-            headers: {
-                'X-GitHub-Api-Version': '2022-11-28'
-            }
+            per_page: 10,
         });
 
         // 3. Verifica a resposta (O SDK geralmente facilita o tratamento de erros)
@@ -27,7 +22,7 @@ async function fetchUserRepos() {
         listElement.innerHTML = ''; // Limpa a mensagem de carregamento
 
         if (repos.length === 0) {
-            listElement.innerHTML = `<li>Nenhum repositório público encontrado para ${GITHUB_USERNAME}.</li>`;
+            listElement.innerHTML = `<li>Nenhum repositório público encontrado para ${nomeUsuarioString}.</li>`;
             return;
         }
 
@@ -50,12 +45,11 @@ async function fetchUserRepos() {
 }
 
 btnBuscar.addEventListener('click', () => {
-    if (nomeUsuario.value.trim() === '') {
+    const nomeUsuarioValor = nomeUsuario.value.trim();
+    if (nomeUsuarioValor === '') {
         alert('Por favor, digite um nome de usuário do GitHub.');
         return;
     }
-    else {
-        titulo.textContent = `Repositórios do Usuário: ${nomeUsuario.value}`;
-        fetchUserRepos();
-    }
+    titulo.textContent = `Repositórios do Usuário: ${nomeUsuarioValor}`;
+    fetchUserRepos(nomeUsuarioValor);
 });

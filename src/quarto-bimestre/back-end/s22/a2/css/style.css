@@ -1,8 +1,26 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .container {
-    ;
     max-width: 600px;
     padding: 20px 20px;
     font-family:Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.grupo-tags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+    gap: 10px;
+    margin-bottom: 20px;
 }
 
 #nome-usuario {
@@ -12,3 +30,18 @@
     border-radius: 8px;
 }
 
+#btn-buscar {
+    padding: 15px 15px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+#btn-buscar:hover {
+    background-color: #007bff;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
