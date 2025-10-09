@@ -27,7 +27,7 @@ def cancelar_assento(linha, coluna):
 
 def exibir_mapa():
     print("Mapa de assentos do cinema:")
-    print("  1 2 3 4 5 6 7 8")
+    print("  0 1 2 3 4 5 6 7")
     for i in range(5):
         linha = str(i + 1) + " "
         for j in range(8):
