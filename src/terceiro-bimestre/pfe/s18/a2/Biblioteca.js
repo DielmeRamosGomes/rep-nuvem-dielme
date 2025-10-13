@@ -51,5 +51,10 @@ class Biblioteca {
       console.log("--------------------------------------");
     });
   }
+
+  adicionar_emprestimo() {
+
+  }
+
 }
 export default Biblioteca;
