@@ -1,7 +1,8 @@
 {
-    "compilerOptions": {
-      "module": "ESNext",
-      "target": "ESNext"
-    }
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "CommonJS",
+    "outDir": "out"
   }
+}
   
