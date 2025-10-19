@@ -1,0 +1,21 @@
+.menu {
+  background-color: #3498db;
+  border-radius: 8px;
+}
+
+.lista-item {
+  display: flex;
+  flex-direction: row;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  gap: 10px;
+  list-style: none;
+}
+
+.item {
+  cursor: pointer;
+  color: #943333;
+}
+.item:hover {
+  color: rgb(201.4371859296, 99.5628140704, 99.5628140704);
+}/*# sourceMappingURL=style.css.map */

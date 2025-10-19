@@ -1,0 +1,33 @@
+@use "sass:color";
+$cor-primaria: #3498db;
+$cor-secundaria: #943333;
+$tamanho-fonte: 50px;
+$familia-fonte: Arial, Helvetica, sans-serif;
+$gap: 10px;
+$pixels: 8px;
+
+@mixin borda-redonda($pixels) {
+    border-radius: $pixels;
+}
+
+.menu {
+    background-color: $cor-primaria;
+    @include borda-redonda($pixels);
+}
+
+.lista-item {
+    display: flex;
+    flex-direction: row;
+    font-family: $familia-fonte;
+    font-size: $tamanho-fonte;
+    gap: $gap;
+    list-style: none;
+}
+
+.item {
+    cursor: pointer;
+    color: $cor-secundaria;
+    &:hover {
+        color: color.adjust($cor-secundaria, $lightness: 20%); // aumenta a luminosidade da cor em 10%
+    }
+}
