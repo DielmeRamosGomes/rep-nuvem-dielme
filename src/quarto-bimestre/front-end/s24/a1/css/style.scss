@@ -1,7 +1,8 @@
 @use "sass:color";
 $cor-primaria: #3498db;
 $cor-secundaria: #943333;
-$tamanho-fonte: 50px;
+$cor-paragrafo: rgb(214, 16, 16);
+$tamanho-fonte: 40px;
 $familia-fonte: Arial, Helvetica, sans-serif;
 $gap: 10px;
 $pixels: 8px;
@@ -10,9 +11,28 @@ $pixels: 8px;
     border-radius: $pixels;
 }
 
+@mixin centralizando-div() {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    @include borda-redonda($pixels);
+}
+
+.centro {
+    @include centralizando-div;
+}
+
+.p-centro {
+    color: $cor-paragrafo;
+    font-size: $tamanho-fonte;
+}
+
 .menu {
     background-color: $cor-primaria;
     @include borda-redonda($pixels);
+    margin-bottom: 10px;
 }
 
 .lista-item {
