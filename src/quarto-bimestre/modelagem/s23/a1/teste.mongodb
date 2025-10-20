@@ -1,11 +1,26 @@
 /*
-use('db_test');
-
-db.Clientes.insertOne({
-    "id": 1,
-    "nome": "Dielme Ramos",
-    "email": "dielme@exemplo.com",
-    "senha": "senha123"
-});
+use('estoque');
+db.createCollection("produtos");
+db.createCollection("categorias");
+db.createCollection("fornecedores");
 */
+
+db.produtos.insertMany(
+    [
+        {
+            nome: "Notebook",
+            preco: 3500,
+            categoria_id: 1,
+            fornecedor_id: 101,
+            estoque: 10
+        },
+        {
+            nome: "Smartphone",
+            preco: 2000,
+            categoria_id: 1,
+            fornecedor_id: 102,
+            estoque: 25
+        }
+    ]
+);
 
