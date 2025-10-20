@@ -1,26 +1,60 @@
-/*
+
 use('estoque');
+/*
 db.createCollection("produtos");
 db.createCollection("categorias");
 db.createCollection("fornecedores");
-*/
 
 db.produtos.insertMany(
     [
         {
-            nome: "Notebook",
-            preco: 3500,
-            categoria_id: 1,
-            fornecedor_id: 101,
-            estoque: 10
+            "nome": "Notebook",
+            "preco": 3500,
+            "categoria_id": 1,
+            "fornecedor_id": 101,
+            "estoque": 10
         },
         {
-            nome: "Smartphone",
-            preco: 2000,
-            categoria_id: 1,
-            fornecedor_id: 102,
-            estoque: 25
+            "nome": "Smartphone",
+            "preco": 2000,
+            "categoria_id": 1,
+            "fornecedor_id": 102,
+            "estoque": 25
         }
     ]
 );
 
+db.categorias.insertMany(
+    [
+        {
+            _id: 1,
+            nome: "Eletrônicos"
+        },
+        {
+            _id: 2,
+            nome: "Acessórios"
+        }
+    ]
+);
+
+db.fornecedores.insertMany(
+    [
+        {
+            _id: 101,
+            nome: "Tech Distribuidora",
+            contato: "123456789"
+        },
+        {
+            _id: 102,
+            nome: "Smart Imports",
+            contato: "987654321"
+        }
+    ]
+);
+
+// mostra todos os produtos cadastrados no banco
+db.produtos.find(); 
+
+// Encontrem todos os produtos com estoque superior a 15:
+db.produtos.find({ estoque: { $gt: 15 } });
+*/
