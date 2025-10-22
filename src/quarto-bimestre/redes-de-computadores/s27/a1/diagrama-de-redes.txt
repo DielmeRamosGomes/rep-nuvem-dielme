@@ -1,0 +1,48 @@
+[Internet]
+    |
+  [Firewall]
+    |
+  [Proxy] -- (Balanceamento de carga e proteção IP clientes)
+    |
+[Proxy Reverso] -- (Proteção e ocultação IP dos servidores)
+    |
+   [WAF] -- (Proteção camada 7 contra DoS)
+    |
+[Servidores: Web | Dados | WAF]
+
+Firewall:
+Fica na fronteira da rede, filtrando o tráfego entre a 
+Internet e a rede interna. Ele bloqueia acessos não 
+autorizados, protegendo contra ataques básicos e 
+restringindo o tráfego com base em regras definidas.
+
+Proxy:
+Atua para proteger o endereço IP dos clientes internos 
+ao fazer requisições externas em nome deles. Também 
+realiza o balanceamento de carga, distribuindo 
+requisições para evitar sobrecarga em um único servidor.
+
+Proxy Reverso:
+Fica entre a rede externa e os servidores internos, 
+escondendo o IP real dos servidores web. Além disso, 
+adiciona uma camada extra de proteção contra ataques 
+direcionados diretamente aos servidores.
+
+WAF (Web Application Firewall):
+Protege especificamente contra ataques na camada 7 do 
+modelo OSI (aplicação), como ataques DoS/DDoS e injeção 
+de SQL. Ele se posiciona próximo aos servidores, 
+filtrando tráfego malicioso focado em aplicações web.
+
+Servidores:
+
+Servidor Web: Atende as requisições HTTP/HTTPS dos 
+usuários.
+
+Servidor de Dados: Armazena e gerencia dados utilizados 
+pelos servidores web.
+
+Servidor WAF: Onde o WAF está implementado, protegendo a 
+aplicação.
+
+
