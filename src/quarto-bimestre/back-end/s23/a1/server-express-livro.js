@@ -22,12 +22,30 @@ livros.push(livro1);
 livros.push(livro2);
 
 app.get('/listarlivros', (req, res) => {
-    try {
-        res.json(livros);
-    } catch(error) {
-      console.error('Erro ao listar livros:', error);
-      res.status(500).json({ error: 'Erro ao listar livros' });
-    }    
+  try {
+    res.json(livros);
+  } catch (error) {
+    console.error('Erro ao listar livros:', error);
+    res.status(500).json({ error: 'Erro ao listar livros' });
+  }
+});
+
+app.post('/cadastrarlivros', (req, res) => {
+  try {
+    let { id, nome, autor, categoria } = req.body;
+
+    if (!id || !nome || !autor || !categoria) {
+      return res.status(400).json({ message: 'Todos os campos são obrigatórios!' });
+    }
+    let novoLivro = new Livro(id, nome, autor, categoria);
+    livros.push(novoLivro);
+    res.status(201).json({message: 'Livro cadastrado com sucesso!', livro: novoLivro});
+  } catch (error) {
+    console.error(`Erro ao cadastrar livro ${error}`);
+    res.status(500).json({error: 'Erro ao cadastrar livro'});
+  }
+  
+
 });
 
 const PORT = 3000;
