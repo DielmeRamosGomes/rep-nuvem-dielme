@@ -22,17 +22,15 @@ livros.push(livro1);
 livros.push(livro2);
 
 function atualizarLivro(id, nome, autor, categoria) {
-  for (let livro in livros) {
-    if (livro.getId() == id) {
-      livro.setNome(nome);
-      livro.setAutor(autor);
-      livro.setCategoria(categoria);
-      return livro;
-    }
+  const livro = livros.find(livro => livro.getId() === id);
+  if (!livro) {
+    return null;
   }
-  return null;
+  livro.setNome(nome);
+  livro.setAutor(autor);
+  livro.setCategoria(categoria);
+  return livro;
 }
-
 
 app.get('/listarlivros', (req, res) => {
   try {
@@ -72,6 +70,10 @@ app.put('/atualizarlivros', (req, res) => {
     console.error(`Erro ao atualizar livro ${error}`);
     res.status(500).json({ error: 'Erro ao atualizar livro' });
   }
+});
+
+app.delete('/deletarlivros', (req, res) => {
+
 });
 
 const PORT = 3000;

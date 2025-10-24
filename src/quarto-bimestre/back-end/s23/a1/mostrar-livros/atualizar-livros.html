@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/atualizar-livros.css">
+    <title>Atualizar Livros</title>
+</head>
+<body>
+    <div class="container">
+        <form class="menu">
+            <ul class="item-menu">
+                <a href="./index.html"><li class="item">Início</li></a>
+            </ul>
+        </form>
+        <form class="form-cadastro">
+            <div class="box">
+                <label for="id-livro">ID:</label>
+                <input type="text" name="id" id="id-livro" required>
+            </div>
+            <div class="box">
+                <label for="nome-livro">NOME:</label>
+                <input type="text" name="nome" id="nome-livro" required>
+            </div>
+            <div class="box">
+                <label for="autor-livro">AUTOR:</label>
+                <input type="text" name="autor" id="autor-livro" required>
+            </div>
+            <div class="box">
+                <label for="categoria-livro">CATEGORIA:</label>
+            <input type="text" name="categoria" id="categoria-livro" required>
+            </div>
+            <button class="btn-cadastrar" type="submit">Cadastrar Livro</button>
+        </form>
+        <p id="livro-cadastrado"></p>
+    </div>
+
+    <script src="./js/atualizar-livros.js"></script>
+</body>
+</html>
