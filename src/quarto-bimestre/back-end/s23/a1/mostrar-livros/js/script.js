@@ -21,10 +21,10 @@ function fetchBuscarLivros() {
                 novoCard.classList.add('card');
 
                 novoCard.innerHTML = `
-                    <h1 id="id-livro">ID: ${livro.id}</h1>
-                    <h2 id="nome-livro">Nome: ${livro.nome}</h2>
-                    <h3 id="autor-livro">Autor: ${livro.autor}</h3>
-                    <h4 id="categoria">Categoria: ${livro.categoria}</h4>
+                    <p id="id-livro">ID: ${livro.id}</p>
+                    <p id="nome-livro">Nome: ${livro.nome}</p>
+                    <p id="autor-livro">Autor: ${livro.autor}</p>
+                    <p id="categoria">Categoria: ${livro.categoria}</p>
                 `;
                 card.appendChild(novoCard);
             });

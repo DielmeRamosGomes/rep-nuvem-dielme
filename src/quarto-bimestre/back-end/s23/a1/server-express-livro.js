@@ -44,13 +44,11 @@ app.post('/cadastrarlivros', (req, res) => {
     console.error(`Erro ao cadastrar livro ${error}`);
     res.status(500).json({error: 'Erro ao cadastrar livro'});
   }
-  
-
 });
 
 const PORT = 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor rodando: http://localhost:${PORT}/listarlivros`);
+  console.log(`Servidor rodando: http://localhost:${PORT}`);
 });
 
 
