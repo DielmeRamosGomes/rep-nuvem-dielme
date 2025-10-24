@@ -21,6 +21,19 @@ const livro2 = new Livro(2, "Harry Potter II", "JK Rowling", "Fantasia");
 livros.push(livro1);
 livros.push(livro2);
 
+function atualizarLivro(id, nome, autor, categoria) {
+  for (let livro in livros) {
+    if (livro.getId() == id) {
+      livro.setNome(nome);
+      livro.setAutor(autor);
+      livro.setCategoria(categoria);
+      return livro;
+    }
+  }
+  return null;
+}
+
+
 app.get('/listarlivros', (req, res) => {
   try {
     res.json(livros);
@@ -39,10 +52,25 @@ app.post('/cadastrarlivros', (req, res) => {
     }
     let novoLivro = new Livro(id, nome, autor, categoria);
     livros.push(novoLivro);
-    res.status(201).json({message: 'Livro cadastrado com sucesso!', livro: novoLivro});
+    res.status(201).json({ message: 'Livro cadastrado com sucesso!', livro: novoLivro });
   } catch (error) {
     console.error(`Erro ao cadastrar livro ${error}`);
-    res.status(500).json({error: 'Erro ao cadastrar livro'});
+    res.status(500).json({ error: 'Erro ao cadastrar livro' });
+  }
+});
+
+app.put('/atualizarlivros', (req, res) => {
+  try {
+    let { id, nome, autor, categoria } = req.body;
+
+    if (!id || !nome || !autor || !categoria) {
+      return res.status(400).json({ message: 'Todos os campos são obrigatórios!' });
+    }
+    let livroAtualizado = atualizarLivro(id, nome, autor, categoria);
+    res.status(201).json({ message: 'Livro atualizado com sucesso!', livro: livroAtualizado });
+  } catch (error) {
+    console.error(`Erro ao atualizar livro ${error}`);
+    res.status(500).json({ error: 'Erro ao atualizar livro' });
   }
 });
 

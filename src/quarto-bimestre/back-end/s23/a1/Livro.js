@@ -22,6 +22,22 @@ class Livro {
         return this.categoria;
     }
 
+    setId(id) {
+        this.id = id;
+    }
+
+    setNome(nome) {
+        this.nome = nome
+    }
+
+    setAutor(autor) {
+        this.autor = autor;
+    }
+
+    setCategoria(categoria) {
+        this.categoria = categoria;
+    }
+
     exibirDetalhes() {
         console.log(`ID: ${this.getId()}`);
         console.log(`Nome: ${this.getNome()}`);
