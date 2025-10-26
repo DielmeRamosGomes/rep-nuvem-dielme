@@ -65,7 +65,12 @@ app.put('/atualizarlivros', (req, res) => {
       return res.status(400).json({ message: 'Todos os campos são obrigatórios!' });
     }
     let livroAtualizado = atualizarLivro(id, nome, autor, categoria);
-    res.status(201).json({ message: 'Livro atualizado com sucesso!', livro: livroAtualizado });
+    
+    if (livroAtualizado === null) {
+      return res.status(404).json({ message: 'Livro não encontrado!' });
+    } else {
+      res.status(201).json({ message: 'Livro atualizado com sucesso!', livro: livroAtualizado });
+    }
   } catch (error) {
     console.error(`Erro ao atualizar livro ${error}`);
     res.status(500).json({ error: 'Erro ao atualizar livro' });
