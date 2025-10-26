@@ -6,7 +6,8 @@ const categoriaLivro = document.querySelector('#categoria-livro');
 const formCadastro = document.querySelector('.form-cadastro');
 const pLivroCadastrado = document.querySelector('#livro-cadastrado');
 
-function fetchCadastrarLivro() {
+async function fetchCadastrarLivro() {
+    let resposta = null;
     pLivroCadastrado.textContent = ``;
     const formDado = new FormData(formCadastro);
     const livro = {
@@ -17,13 +18,17 @@ function fetchCadastrarLivro() {
     }
     console.log(livro);
     try {
-        fetch('http://localhost:3000/cadastrarlivros', {
+        resposta = await fetch('http://localhost:3000/cadastrarlivros', {
         method: 'POST',
         headers: {
             'Content-type': 'application/json'
         },
         body: JSON.stringify(livro)
     });
+    if (!resposta.ok) {
+        const erroData = await resposta.json(); // Tenta ler o corpo do erro (se houver)
+        throw new Error(`Erro HTTP! Status: ${resposta.status} - Mensagem: ${erroData.message || 'Desconhecida'}`);
+    }
     pLivroCadastrado.textContent = `Livro cadastrado com sucesso`;
     } catch (error) {
         console.log(`Erro ao cadastrar livro: ${error}`);

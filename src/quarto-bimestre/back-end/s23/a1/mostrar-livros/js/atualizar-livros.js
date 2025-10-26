@@ -6,7 +6,8 @@ const categoriaLivro = document.querySelector('#categoria-livro');
 const formCadastro = document.querySelector('.form-cadastro');
 const pLivroCadastrado = document.querySelector('#livro-cadastrado');
 
-function fetchAtualizarLivro() {
+async function fetchAtualizarLivro() {
+    let resposta = null;
     pLivroCadastrado.textContent = ``;
     const formDado = new FormData(formCadastro);
     const livro = {
@@ -17,13 +18,18 @@ function fetchAtualizarLivro() {
     }
     console.log(livro);
     try {
-        fetch('http://localhost:3000/atualizarlivros', {
+        resposta = await fetch('http://localhost:3000/atualizarlivros', {
         method: 'PUT',
         headers: {
             'Content-type': 'application/json'
         },
         body: JSON.stringify(livro)
     });
+    if (!resposta.ok) {
+        const erroData = await resposta.json(); // Tenta ler o corpo do erro (se houver)
+        pLivroCadastrado.textContent = `Erro HTTP! Status: ${resposta.status} - Mensagem: ${erroData.message || 'Desconhecida'}`;
+        throw new Error(`Erro HTTP! Status: ${resposta.status} - Mensagem: ${erroData.message || 'Desconhecida'}`); 
+    }
     pLivroCadastrado.textContent = `Livro atualizado com sucesso`;
     } catch (error) {
         console.log(`Erro ao atualizar livro: ${error}`);
