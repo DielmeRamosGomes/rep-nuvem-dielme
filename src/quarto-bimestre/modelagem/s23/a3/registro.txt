@@ -1,0 +1,3 @@
+Pesquisar sobre o redis 
+
+operações basícas com redis (crud) 

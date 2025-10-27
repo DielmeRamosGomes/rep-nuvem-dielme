@@ -36,7 +36,7 @@ db.categorias.insertMany(
         }
     ]
 );
-*/
+
 db.fornecedores.insertMany(
     [
         {
@@ -51,10 +51,10 @@ db.fornecedores.insertMany(
         }
     ]
 );
-/*
+*/
 // mostra todos os produtos cadastrados no banco
-db.produtos.find(); 
+//db.produtos.find(); 
 
 // Encontrem todos os produtos com estoque superior a 15:
-db.produtos.find({ estoque: { $gt: 15 } });
-*/
+//db.produtos.find({ estoque: { $gt: 15 } });
+
