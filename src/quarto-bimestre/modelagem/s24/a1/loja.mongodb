@@ -1,0 +1,78 @@
+use('db_loja');
+
+// adicionar produtos à coleção "produtos"
+/*
+db.produtos.insertOne(
+    {
+        "nome": "Laptop Gamer",
+        "categoria": "Computadores",
+        "preco": 5000,
+        "estoque": 10,
+        "fornecedor": {
+            "nome": "Tech Distribuidora",
+            "contato": "tech@distribuidora.com"
+        }
+    }
+);
+*/
+
+db.produtos.insertOne(
+    {
+        "nome": "PC Gamer",
+        "categoria": "Computadores",
+        "preco": 4000,
+        "estoque": 9,
+        "fornecedor": {
+            "nome": "Tech Distribuidora",
+            "contato": "tech@distribuidora.com"
+        }
+    }
+);
+
+/*
+db.produtos.insertOne(
+    {
+        "nome": "Mesa Gamer",
+        "categoria": "Móveis",
+        "preco": 2000,
+        "estoque": 5,
+        "fornecedor": {
+            "nome": "Tech Distribuidora",
+            "contato": "tech@distribuidora.com"
+        }
+    }
+);
+*/
+
+/*
+// Retorna todos os produtos
+//db.produtos.find();
+
+// Retorna todos os produtos da categoria "Computadores"
+db.produtos.find({ "categoria": "Computadores" });
+*/
+
+/*
+// inserir um novo atributo id no fornecedor
+db.produtos.updateOne(
+    {
+        "fornecedor.id": { $exists: false },
+        "_id": ObjectId("68fff691a7642b3d76cb4c97")
+    },
+    {
+        $set: { "fornecedor.id": 1 }
+    }
+); 
+*/
+/*
+// atualizar o preço do produto "Mesa Gamer" para 2000
+db.produtos.updateOne(
+    {
+        "_id": ObjectId("68fff691a7642b3d76cb4c97")
+    },
+    {
+        $set: { "preco": 2000 }
+    }
+);
+*/
+
