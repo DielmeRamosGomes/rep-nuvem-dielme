@@ -16,6 +16,7 @@ db.produtos.insertOne(
 );
 */
 
+/*
 db.produtos.insertOne(
     {
         "nome": "PC Gamer",
@@ -28,6 +29,7 @@ db.produtos.insertOne(
         }
     }
 );
+*/
 
 /*
 db.produtos.insertOne(
@@ -73,6 +75,27 @@ db.produtos.updateOne(
     {
         $set: { "preco": 2000 }
     }
+);
+*/
+
+// Deletar um produto da coleção "produtos"
+/*db.produtos.deleteOne(
+    {
+        "_id": ObjectId("68fffeaece7b4e2fab4d5dcf")
+    }
+);
+*/
+
+/*
+// encontrar um produto que o preco seja maior que 3000 (Greater Than)
+db.produtos.find({ "preco": { $gt: 3000 } });
+*/
+
+/*
+// Atualizar vários documentos ao mesmo tempo, dimunuindo o estoque de todos os produtos da categoria "Computadores"
+db.produtos.updateMany(
+    { "categoria": "Computadores" },
+    { $inc: { "estoque": -2 } }
 );
 */
 
