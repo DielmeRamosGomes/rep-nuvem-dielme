@@ -46,10 +46,11 @@ db.produtos.insertOne(
 );
 */
 
-/*
-// Retorna todos os produtos
-//db.produtos.find();
 
+// Retorna todos os produtos
+db.produtos.find();
+
+/*
 // Retorna todos os produtos da categoria "Computadores"
 db.produtos.find({ "categoria": "Computadores" });
 */
