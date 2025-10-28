@@ -98,6 +98,7 @@ db.vendas.aggregate(
 );
 */
 
+/*
 // Usem o pipeline de agregação para identificar os produtos mais vendidos
 db.vendas.aggregate(
     [
@@ -119,7 +120,7 @@ db.vendas.aggregate(
         { $sort: { totalVendido: -1 } }
     ]
 );
-
+*/
 
 
 
