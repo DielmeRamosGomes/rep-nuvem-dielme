@@ -1,0 +1,126 @@
+use("db_tech_shop");
+/*
+db.clientes.insertOne(
+    {
+        "nome": "Dielme Ramos",
+        "email": "dielme@exemplo.com",
+        "regiao": "Sul"
+    }
+);
+*/
+
+/*
+db.clientes.insertMany(
+    [
+        {
+            "nome": "Ana Silva",
+            "email": "ana@eemplo.com",
+            "regiao": "Norte"
+        },
+        {
+            "nome": "Bruno Costa",
+            "email": "bruno@exemplo.com",
+            "regiao": "Nordeste"
+        }
+    ]
+);
+*/
+
+/*
+db.produtos.insertMany(
+    [
+        {
+            "nome": "Notebook Gamer",
+            "categoria": "Eletrônicos",
+            "preco": 4500
+        },
+        {
+            "nome": "Smartphone",
+            "categoria": "Eletrônicos",
+            "preco": 2500
+        },
+        {
+            "nome": "Cadeira de Escritório",
+            "categoria": "Móveis",
+            "preco": 800
+        }
+    ]
+);
+*/
+
+/*
+db.vendas.insertMany(
+    [
+        {
+            "dataVenda": ISODate("2025-10-27T10:30:00Z"),
+            "produtoId": ObjectId("69000770422308dd058a660f"),
+            "clienteId": ObjectId("69000659b35ad488801f1bc9"),
+            "quantidade": 3,
+            "precoTotal": 13500,
+            "regiao": "Sul"
+        },
+        {
+            "dataVenda": new Date(),
+            "produtoId": ObjectId("69000770422308dd058a6610"),
+            "clienteId": ObjectId("690006d8fd0a3e44e9482e52"),
+            "quantidade": 2,
+            "precoTotal": 5000,
+            "regiao": "Sul"
+        },
+        {
+            "dataVenda": new Date(),
+            "produtoId": ObjectId("69000770422308dd058a6611"),
+            "clienteId": ObjectId("690006d9fd0a3e44e9482e53"),
+            "quantidade": 2,
+            "precoTotal": 5000,
+            "regiao": "Norte"    
+        }
+    ]
+);
+*/
+
+/*
+// criar um indice para o atributo dataVenda na coleção vendas
+db.vendas.createIndex({ "dataVenda": 1 });
+*/
+
+/*
+//Criem um pipeline de agregação para calcular o total de vendas por região
+db.vendas.aggregate(
+    [
+        {
+            $group: {
+                _id: "$regiao",
+                totalVendas: { $sum: "$precoTotal" }
+            }
+        }
+    ]
+);
+*/
+
+// Usem o pipeline de agregação para identificar os produtos mais vendidos
+db.vendas.aggregate(
+    [
+        {
+            $lookup: {
+                from: produtos,
+                localField: "produtoId",
+                foreignField: "_id",
+                as: "produtoInfo"
+            }
+        },
+        { $unwind: "$produtoInfo" },
+        {
+            $group: {
+                _id: "$produtoInfo.nome",
+                totalVendido: { $sum: "$quantidade" }
+            }
+        },
+        { $sort: { totalVendido: -1 } }
+    ]
+);
+
+
+
+
+
