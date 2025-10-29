@@ -1,0 +1,46 @@
+A replicação no MongoDB é realizada por meio de Conjuntos de 
+Réplicas (Replica Sets).
+Um Conjunto de Réplicas é um grupo de processos do mongodb que
+mantêm o mesmo conjunto de dados. Eles são a base para 
+implantações em produção e fornecem:
+
+Redundância e Alta Disponibilidade: Com múltiplas cópias dos 
+dados em diferentes servidores, o sistema pode tolerar a falha 
+de um único servidor. Se o servidor principal cair, um dos 
+secundários assume automaticamente o papel de principal.
+
+Capacidade de Leitura Aumentada: Clientes podem enviar 
+operações de leitura para os servidores secundários, distribuindo 
+a carga de leitura. Recuperação de Desastres, Relatórios e Backups:
+Cópias adicionais podem ser usadas para fins específicos.
+
+O processo básico de replicação envolve:
+Escritas no Primário: Todas as operações de escrita são enviadas
+ para o nó primário.
+ 
+Registro no Oplog: O primário registra as alterações no oplog, um 
+log especial e capped collection (coleção com tamanho fixo) que 
+mantém um registro das operações que modificam os dados.
+
+Sincronização: Os nós secundários leem o oplog do primário (ou de 
+outros secundários) e aplicam essas operações ao seu próprio 
+conjunto de dados. Isso garante que todos os membros do conjunto 
+de réplicas mantenham o mesmo estado de dados.
+
+Failover (Falha e Recuperação): Se o primário ficar indisponível, 
+os membros restantes realizam uma eleição e elegem um novo membro 
+primário, garantindo que o banco de dados permaneça operacional 
+com alta disponibilidade.
+
+// como executar
+# Navegue até o diretório bin
+cd "c:\Program Files\MongoDB\Server\8.0\bin" 
+
+# Instância 1 (porta 27017)
+mongod.exe --config mongod_rs0-01.conf
+
+# Instância 2 (porta 27018)
+mongod.exe --config mongod_rs0-02.conf
+
+# Instância 3 (porta 27019)
+mongod.exe --config mongod_rs0-03.conf
