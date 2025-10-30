@@ -48,25 +48,25 @@ db.produtos.insertOne(
 
 
 // Retorna todos os produtos
-db.produtos.find();
+//db.produtos.find();
 
-/*
+
 // Retorna todos os produtos da categoria "Computadores"
-db.produtos.find({ "categoria": "Computadores" });
-*/
+//db.produtos.find({ "categoria": "Computadores" });
 
-/*
+
+
 // inserir um novo atributo id no fornecedor
 db.produtos.updateOne(
     {
         "fornecedor.id": { $exists: false },
-        "_id": ObjectId("68fff691a7642b3d76cb4c97")
+        "_id": ObjectId("6900c381eb5dcecf85fe68a9")
     },
     {
         $set: { "fornecedor.id": 1 }
     }
 ); 
-*/
+
 /*
 // atualizar o preço do produto "Mesa Gamer" para 2000
 db.produtos.updateOne(
