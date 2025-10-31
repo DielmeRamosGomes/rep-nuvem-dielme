@@ -34,4 +34,18 @@ def execucao(matriz, dim_linha, dim_coluna, pos_linha, escolha):
         media = soma / dim_coluna
         print(f"A média dos elementos da linha é  = {media}")
         
-        
+def main():
+    while True:
+        dim_linha = int(input("Digite a dimensão de linhas da matriz: "))
+        dim_coluna = int(input("Digite a dimensão de colunas da matriz: "))
+        matriz = criar_matriz(dim_linha, dim_coluna)
+        matriz = matriz_aleatoria(matriz, dim_linha, dim_coluna)
+        print("Matriz gerada:")
+        for linha in matriz:
+            print(linha)
+        pos_linha = int(input(f"Digite a posição da linha (0 a {dim_linha - 1}): "))
+        escolha = opcoes()
+        execucao(matriz, dim_linha, dim_coluna, pos_linha, escolha)
+        continuar = input("Deseja continuar? (s/n): ")
+        if continuar.lower() != 's':
+            break   
