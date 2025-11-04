@@ -17,7 +17,6 @@ def verifica_senha(senha):
             return "Senha invalida: A senha deve conter pelo menos um caractere especial."
         else:
             return "Senha foi considerada forte."
-        
     except TypeError:
         return "Erro: A senha deve ser uma string."
 
