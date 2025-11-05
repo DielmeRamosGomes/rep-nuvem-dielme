@@ -26,4 +26,17 @@ def verifica_letras(senha, alfabeto):
             return True
     return False
 
-print(verifica_senha("Abcdefghij1!"))
+#print(verifica_senha("Abcdefghij1!"))
+
+def menu():
+    while True:
+        senha = input("Digite uma senha: ")
+        print(verifica_senha(senha))
+        continua = input("Deseja verificar outra senha? (s/n): ").lower()
+        if continua == 'n':
+            break
+        
+if __name__ == "__main__":
+    menu()
+
+
