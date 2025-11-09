@@ -1,34 +1,62 @@
-use("db_test");
+use("db_aula_remota");
 
-db.Clientes.insertOne({
-    "cliente_id": 1,
-    "nome": "Maria Silva",
-    "email": "maria@example.com",
-    "telefone": "123456789",
-    "pedidos": [1, 2] // IDs dos pedidos relacionados ao cliente
-});
-
-db.Produtos.insertMany([
+/*
+db.Clientes.insertOne(
     {
-        "produto_id": 101,
-        "nome": "Notebook",
-        "preco": 3500.00,
-        "categoria": "Eletrônicos"
-    },
-    {
-        "produto_id": 102,
-        "nome": "Smartphone",
-        "preco": 1500.00,
-        "categoria": "Eletrônicos"
-    },
-    {
-        "produto_id": 103,
-        "nome": "Fone de Ouvido",
-        "preco": 300.00,
-        "categoria": "Acessórios"
+        "nome": "Maria Silva",
+        "email": "maria@example.com",
+        "telefone": "123456789",
+        "pedidos": [1, 2] // IDs dos pedidos relacionados ao cliente
     }
-]);
+);
+*/
 
+/*
+db.Clientes.insertMany(
+    [
+        {
+
+            "nome": "Daniel",
+            "email": "daniel@example.com",
+            "telefone": "123456789",
+            "pedidos": [1, 2] // IDs dos pedidos relacionados ao cliente
+        },
+        {
+
+            "nome": "Henrique",
+            "email": "henrique@example.com",
+            "telefone": "123456789",
+            "pedidos": [1, 2] // IDs dos pedidos relacionados ao cliente
+        }
+    ]
+);
+*/
+
+/*
+db.Produtos.insertMany(
+    [
+        {
+            "nome": "Notebook",
+            "preco": 3500.00,
+            "categoria": "Eletrônicos"
+        },
+        {
+            "nome": "Smartphone",
+            "preco": 1500.00,
+            "categoria": "Eletrônicos"
+        },
+        {
+            "nome": "Fone de Ouvido",
+            "preco": 300.00,
+            "categoria": "Acessórios"
+        }
+    ]
+);
+*/
+
+db.Clientes.find();
+
+/*
 db.Pedidos.insertOne({
     "pedido_id": 1,
     "data": new Date("2024-11-15"),
@@ -47,4 +75,4 @@ db.Pedidos.insertOne({
         }
     ]
 });
-
+*/
