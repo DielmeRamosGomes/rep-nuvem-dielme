@@ -1,0 +1,72 @@
+O que é o sharding no MongoDB?
+
+R.: Sharding no MongoDB é uma técnica de escalabilidade horizontal que 
+permite distribuir grandes volumes de dados e a carga de trabalho de 
+consultas (leitura e escrita) entre múltiplos servidores independentes, 
+chamados de shards. O objetivo principal é superar as limitações de um 
+único servidor, como capacidade de armazenamento e poder de processamento,
+garantindo alto desempenho e disponibilidade para aplicações com bases de
+dados massivas.
+
+Como funciona:
+Particionamento de Dados: O conjunto de dados é dividido em partes menores, 
+chamadas chunks, e cada chunk é armazenado em um shard diferente.
+
+Shards: Cada shard é, na verdade, um conjunto de réplicas (replica set) por 
+si só, o que garante redundância e alta disponibilidade dentro do próprio 
+fragmento de dados.
+
+Chave de Shard (Shard Key): O MongoDB usa um campo ou campos específicos dos
+documentos (a shard key) para determinar como os dados serão dividídos e 
+distribuídos entre os shards. A escolha correta da shard key é crucial 
+para garantir uma distribuição de carga equilibrada.
+
+Roteamento de Consultas (Query Router): A aplicação se conecta a um processo
+mongos (roteador de consultas), que direciona as operações de leitura e 
+escrita para os shards apropriados, tornando a distribuição dos dados 
+transparente para o usuário final.
+
+Balanceamento Automático: O sistema inclui um processo de balanceamento 
+automático que monitora a distribuição dos chunks de dados e os move entre 
+os shards para garantir que a carga permaneça uniforme.
+
+Como o sharding melhora a escalabilidade e o desempenho de grandes bases de 
+dados?
+
+R.: A escalabilidade é melhorada por meio da distribuição horizontal de 
+dados e da carga de trabalho:
+
+Distribuição da Carga de Trabalho: Em vez de um único servidor lidar com 
+todas as consultas e transações, cada shard (que reside em um servidor 
+diferente) lida apenas com uma parte dos dados. Isso significa que a carga 
+de trabalho de I/O, CPU e memória é distribuída por múltiplos servidores.
+
+Adição de Capacidade Simples: Para lidar com o crescimento de dados ou de 
+usuários, basta adicionar mais shards (e, portanto, mais servidores). Isso
+é conhecido como escalabilidade horizontal (scale-out), que é mais 
+econômica e oferece limites de crescimento muito maiores do que a 
+escalabilidade vertical (aumentar os recursos de um único servidor).
+
+Maior Tolerância a Falhas: Se um shard falhar, apenas a parte dos dados 
+nele contida fica indisponível, em vez de toda a base de dados.
+
+O desempenho é aprimorado principalmente pela redução do volume de dados 
+que as operações precisam processar:
+
+Consultas Mais Rápidas: Quando uma aplicação precisa consultar dados, ela 
+geralmente só precisa procurar em um ou um pequeno subconjunto de shards. 
+Como cada shard contém apenas uma fração do total de dados, o número de 
+linhas a serem escaneadas é drasticamente reduzido, levando a tempos de 
+resposta (latência) muito mais rápidos.
+
+Melhor Concorrência: O sistema pode processar consultas e gravações de 
+muitos usuários simultaneamente, pois essas operações são distribuídas por 
+diferentes servidores de shard, reduzindo o congestionamento (contenção de 
+locks) em um único servidor.
+
+Otimização do Cache: O conjunto de trabalho (working set) de cada shard é 
+muito menor, o que aumenta a eficácia do cache de dados e índices na memória
+(RAM) de cada servidor, resultando em menos acessos lentos ao disco.
+
+
+

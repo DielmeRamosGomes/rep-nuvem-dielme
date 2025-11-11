@@ -44,3 +44,18 @@ mongod.exe --config mongod_rs0-02.conf
 
 # Instância 3 (porta 27019)
 mongod.exe --config mongod_rs0-03.conf
+
+
+Qual é a diferença entre sharding e replicação? 
+
+O principal objetivo do sharding é a escalabilidade. Ao dividir os dados e a
+carga de trabalho em vários bancos de dados, você reduz a carga em um único 
+banco de dados. A fragmentação garante que, à medida que seus dados crescem,
+você pode adicionar mais fragmentos para acomodá-los, mantendo o desempenho
+e reduzindo o risco de sobrecarga de um único banco de dados.
+
+A replicação, por outro lado, envolve a criação de cópias dos mesmos dados 
+em vários servidores. Cada réplica contém todo o conjunto de dados e pode 
+manipular operações de leitura de forma independente, o que significa que a 
+replicação se concentra na redundância e na disponibilidade, e não na 
+escalabilidade.
