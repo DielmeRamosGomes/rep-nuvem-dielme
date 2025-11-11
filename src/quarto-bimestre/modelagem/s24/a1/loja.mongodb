@@ -1,4 +1,4 @@
-use('db_loja');
+use('loja');
 
 // adicionar produtos à coleção "produtos"
 /*
@@ -46,54 +46,65 @@ db.produtos.insertOne(
 );
 */
 
-
 // Retorna todos os produtos
 //db.produtos.find();
 
 
 // Retorna todos os produtos da categoria "Computadores"
 //db.produtos.find({ "categoria": "Computadores" });
-
+//db.produtos.find({ "categoria": "Móveis" });
 
 
 // inserir um novo atributo id no fornecedor
+/*
 db.produtos.updateOne(
     {
         "fornecedor.id": { $exists: false },
-        "_id": ObjectId("6900c381eb5dcecf85fe68a9")
+        "_id": ObjectId("6913755e8ae74c4b511c7d89")
     },
     {
-        $set: { "fornecedor.id": 1 }
+        $set: { "fornecedor.id": 2 }
     }
 ); 
+*/
 
-/*
+
 // atualizar o preço do produto "Mesa Gamer" para 2000
+/*
 db.produtos.updateOne(
     {
-        "_id": ObjectId("68fff691a7642b3d76cb4c97")
+        "_id": ObjectId("691375b226e0dcaa58f99a39")
     },
     {
-        $set: { "preco": 2000 }
+        $set: { "estoque": 100 }
     }
 );
 */
 
 // Deletar um produto da coleção "produtos"
-/*db.produtos.deleteOne(
+/*
+db.produtos.deleteOne(
     {
-        "_id": ObjectId("68fffeaece7b4e2fab4d5dcf")
+        "_id": ObjectId("691375b226e0dcaa58f99a39")
     }
 );
 */
 
-/*
+
 // encontrar um produto que o preco seja maior que 3000 (Greater Than)
-db.produtos.find({ "preco": { $gt: 3000 } });
+/*
+db.produtos.find(
+    {
+        "preco": {
+            $gt: 3000
+        }
+    }
+);
 */
 
-/*
+
 // Atualizar vários documentos ao mesmo tempo, dimunuindo o estoque de todos os produtos da categoria "Computadores"
+/*
 db.produtos.updateMany(
     { "categoria": "Computadores" },
     { $inc: { "estoque": -2 } }
