@@ -1,0 +1,40 @@
+A.	Como vocês garantiriam que todas as requisições sejam 
+redirecionadas para HTTPS? E qual é a importância dessa medida?
+
+R.: Apache (usando .htaccess ou arquivo de configuração): Você pode 
+adicionar regras de reescrita (Rewrite Rules) ao seu arquivo de 
+configuração ou ao arquivo .htaccess na raiz do seu site. A regra 
+mais comum é:
+
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteEngine On: Liga o módulo de reescrita.
+
+RewriteCond %{HTTPS} off: Verifica se a requisição não está usando 
+HTTPS.
+
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]: Se a
+ condição for verdadeira, redireciona para a mesma URL, mas com 
+ https://, usando um código de status 301 (Movido Permanentemente), 
+ que é ideal para SEO.
+
+
+B.	Que ações vocês implementariam no firewall para reforçar a 
+segurança do servidor?
+
+C.	Quais medidas de hardening vocês consideram essenciais para 
+reduzir a superfície de ataque do servidor?
+
+D.	Como a comunicação entre a equipe de segurança e os 
+desenvolvedores pode ser melhorada para responder rapidamente a 
+alertas como esse?
+
+
+
+
+
+
+
+
+
