@@ -63,7 +63,7 @@ db.produtos.updateOne(
         "_id": ObjectId("6913755e8ae74c4b511c7d89")
     },
     {
-        $set: { "fornecedor.id": 2 }
+        $set: { "fornecedor.id": 1 }
     }
 ); 
 */
