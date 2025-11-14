@@ -1,11 +1,15 @@
 class Livro:
-    def __init__(self, titulo, autor, ano_publicacao, genero):
+    def __init__(self, id, titulo, autor, ano_publicacao, genero):
+        self.id = id
         self.titulo = titulo
         self.autor = autor
         self.ano_publicacao = ano_publicacao
         self.genero = genero
         self.disponivel = True
 
+    def get_id(self):
+        return self.id
+    
     def get_titulo(self):
         return self.titulo
     
@@ -22,6 +26,7 @@ class Livro:
         return self.disponivel
     
     def mostrar_livro(self):
+        print(f"\nId: {self.get_id()}")
         print(f"Título: {self.get_titulo()}")
         print(f"Autor: {self.get_autor()}")
         print(f"Ano de Publicação: {self.get_ano_publicacao()}")

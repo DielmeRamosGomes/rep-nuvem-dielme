@@ -18,7 +18,7 @@ class Usuario:
         return self.senha
 
     def mostra_usuario(self):
-        print(f"ID: {self.get_id()}")
+        print(f"\nID: {self.get_id()}")
         print(f"Nome: {self.get_nome()}")
         print(f"Email: {self.get_email()}")
         
