@@ -6,7 +6,9 @@ import express from 'express';
 import cors from 'cors';
 import mongoose from 'mongoose';
 import USUARIO from './Usuario.js';
+import dotenv from 'dotenv'
 
+dotenv.config();
 const app = express();
 
 // use middleware cors
@@ -29,6 +31,15 @@ app.post('/cadastrodeusuario', async (req, res) => {
         res.status(201).send(usuario);
     } catch (error) {
         res.status(400).send(error);
+    }
+});
+
+app.get('/listarusuarios', async (req, res) => {
+    try {
+        const usuarios = await USUARIO.find();
+        res.status(200).send(usuarios);
+    } catch (error) {
+        res.status(500).send(error);
     }
 });
 
