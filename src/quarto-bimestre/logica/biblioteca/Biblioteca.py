@@ -36,6 +36,21 @@ class Biblioteca:
                 return livro
         return
     
+    def buscar_livro_genero(self, genero):
+        livros_por_genero = []
+        for livro in self.livros:
+            if livro.get_genero().lower() == genero.lower():
+                livros_por_genero.append(livro)
+        if livros_por_genero != []:
+            self.mostra_livros_por_genero(livros_por_genero)
+        else:
+            print("Não existem livros com esse Gênero!")
+    
+    def mostra_livros_por_genero(self, livros):
+        for livro in livros:
+            livro.mostrar_livro()
+            print("------------------------------------")
+    
     def remover_livro(self, id):
         livro = self.buscar_livro(id)
         self.livros.remove(livro)
